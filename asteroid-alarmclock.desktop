@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Alarm Clock
+Categories=Applications;
+Exec=invoker --type=qtcomponents-qt5 /usr/bin/asteroid-alarmclock
+Icon=mate-panel-clock
+X-Desktop-File-Install-Version=0.20

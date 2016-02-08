@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>AlarmTimePickerDialog.qml</file>
+        <file>AlarmDialog.qml</file>
+        <file>AlarmViewRepeater.qml</file>
+        <file>clockHelper.js</file>
+    </qresource>
+</RCC>
