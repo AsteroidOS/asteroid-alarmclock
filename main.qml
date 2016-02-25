@@ -22,9 +22,8 @@ import org.nemomobile.alarms 1.0
 import org.asteroid.controls 1.0
 import "clockHelper.js" as CH
 
-Item {
+Application {
     id: app
-    anchors.fill: parent
 
     property bool populated: false
 
