@@ -22,26 +22,12 @@ import org.asteroid.controls 1.0
 
 Rectangle {
     id: alarmDialogRoot
+    property var alarmObject
     color: "black"
 
-    property alias alarmName : alarmNameField.text
-    property alias alarmTime : alarmTimeField.text
-    property var alarmObject
-
-    signal alarmDisableClicked
-    signal alarmSnoozeClicked
-
-    MouseArea {
-        anchors.fill: parent
-        z: 15
-    }
-
-    Text {
-        id: alarmNameField
-        color: "gray"
-        font.pixelSize: 40
-        anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
+    function twoDigits(x) {
+        if (x<10) return "0"+x;
+        else      return x;
     }
 
     Text {
@@ -49,6 +35,7 @@ Rectangle {
         color: "white"
         font.pixelSize: 50
         anchors.centerIn: parent
+        text: twoDigits(alarmObject.hour) + ":" + twoDigits(alarmObject.minute)
     }
 
     IconButton {
@@ -63,8 +50,18 @@ Rectangle {
         }
 
         onClicked: {
-            alarmDisableClicked();
-            alarmDialogRoot.visible = false;
+            // Disable the alarm if it is a singleshot
+            if(alarmObject.title.length == 0) {
+                //find alarm index
+                for(var i = 0; alarmModel.count > i; i++) {
+                    if (alarmModel.get(i).alarmTime === (+twoDigits(alarmObject.hour)+":"+twoDigits(alarmObject.minute))) {
+                        if (alarmModel.get(i).alarmName === alarmObject.title) {
+                            alarmModel.get(i).alarmEnabled = false;
+                        }
+                    }
+                }
+            }
+            alarmObject.dismiss();
         }
     }
 
@@ -79,9 +76,6 @@ Rectangle {
             right: parent.right
         }
 
-        onClicked: {
-            alarmSnoozeClicked();
-            alarmDialogRoot.visible = false;
-        }
+        onClicked: alarmObject.snooze();
     }
 }

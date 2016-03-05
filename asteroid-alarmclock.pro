@@ -8,8 +8,6 @@ RESOURCES +=   resources.qrc
 OTHER_FILES += main.qml \
                AlarmTimePickerDialog.qml \
                AlarmDialog.qml \
-               TumblerIndexHelper.js \
-               clockHelper.js \
                AlarmViewRepeater.qml
 
 TARGET = asteroid-alarmclock

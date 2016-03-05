@@ -19,86 +19,115 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.3
 import QtQuick.Controls.Styles 1.0
-import "clockHelper.js" as CH
+import org.asteroid.controls 1.0
 
 Repeater {
-    id: repeaterRoot
-    property bool deletionEnabled: false
-    signal editClicked (var alarmObject, var index)
-    property bool dummyProperty: false
+    signal editClicked (var alarm)
 
-    delegate: Rectangle {
+    function twoDigits(x) {
+        if (x<10) return "0"+x;
+        else      return x;
+    }
+
+    function parseAlarmTitle(title) {
+        if      (title === "")        return "Once";
+        else if (title === "mtwTf")   return "Weekdays";
+        else if (title === "sS")      return "Weekends";
+        else if (title === "mtwTfsS") return "Every day";
+        else {
+            var returnString = "";
+            if (title.indexOf("m") >= 0) returnString = "Mon, ";
+            if (title.indexOf("t") >= 0) returnString = returnString + "Tue, ";
+            if (title.indexOf("w") >= 0) returnString = returnString + "Wed, ";
+            if (title.indexOf("T") >= 0) returnString = returnString + "Thu, ";
+            if (title.indexOf("f") >= 0) returnString = returnString + "Fri, ";
+            if (title.indexOf("s") >= 0) returnString = returnString + "Sat, ";
+            if (title.indexOf("S") >= 0) returnString = returnString + "Sun";
+            if ((returnString.indexOf(", ") >= 0) && (returnString.indexOf("Sun") === -1))
+                returnString = returnString.slice(0, returnString.length-2);
+            return returnString;
+        }
+    }
+
+    MouseArea {
+        id: editByClick
         height: 82
-        width: parent.width
+        width: app.width
+        onClicked: editClicked(alarm);
+        onPressAndHold: removeChoice.visible = true
 
         Text {
             id: timeField
-            text: alarmTime
+            text: twoDigits(alarm.hour) + ":" + twoDigits(alarm.minute);
+            font.pixelSize: 35
             anchors {
                 bottom: parent.verticalCenter
                 left: parent.left
-                leftMargin: 60
-                margins: 0
+                leftMargin: 30
             }
-            font.pixelSize: 40
-            z: 20
         }
 
         Text {
-            id: nameField
-            text: CH.parseAlarmTitle(alarmName);
+            id: daysField
+            text: parseAlarmTitle(alarm.title);
+            styleColor: "lightgrey"
+            font.pixelSize: 16
             anchors {
                 top: parent.verticalCenter
-                margins: 0
-                left: timeField.left
+                horizontalCenter: parent.horizontalCenter
             }
-            font.pixelSize: 40
-            z: 20
         }
 
         Switch {
             id: enableSwitch
-            z: 30
+            Component.onCompleted: enableSwitch.checked = alarm.enabled
+            onCheckedChanged: {
+                alarm.enabled = enableSwitch.checked
+                alarm.save()
+            }
             anchors {
                 right: parent.right
                 rightMargin: 30
-                verticalCenter: parent.verticalCenter
-            }
-            checked: repeaterRoot.deletionEnabled ? model.alarmEnabled : model.alarmEnabled
-            onCheckedChanged: {
-                alarmObject.enabled = checked;
-                alarmObject.save();
-            }
-        }
-
-        CheckBox {
-            id: markDeletion
-            z: 30
-            visible: deletionEnabled
-            checked: (repeaterRoot.dummyProperty ? model.markedForDeletion : model.markedForDeletion)
-            onClicked: {
-                alarmModel.get(index).markedForDeletion = !alarmModel.get(index).markedForDeletion
-                console.log("Mark changed to: "+markedForDeletion);
-                repeaterRoot.dummyProperty = !repeaterRoot.dummyProperty;
-            }
-            anchors {
-                left: parent.left
-                leftMargin: 10
-                verticalCenter: parent.verticalCenter
-            }
-        }
-
-        MouseArea {
-            id: editByClick
-            z: 20
-            anchors {
-                left: parent.left
                 top: parent.top
-                bottom: parent.bottom
-                right: enableSwitch.left
+                bottom: daysField.top
             }
-            onClicked: if (!markDeletion.visible) {
-                editClicked(alarmObject, index);
+        }
+
+        Rectangle {
+            id: removeChoice
+            color: "red"
+            anchors.fill: parent
+            visible: false
+
+            MouseArea {
+                anchors.fill: parent
+                IconButton {
+                    iconColor: "black"
+                    iconName: "cancel"
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        leftMargin: Units.dp(4)
+                        left: parent.left
+                    }
+                    onClicked: removeChoice.visible = false
+                }
+                        
+                Text {
+                    text: "Remove ?"
+                    font.pixelSize: 35
+                    anchors.centerIn: parent
+                }
+
+                IconButton {
+                    iconColor: "black"
+                    iconName: "delete"
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        rightMargin: Units.dp(4)
+                        right: parent.right
+                    }
+                    onClicked: alarm.deleteAlarm() // TODO: this seems to be messy, we might have to change the model too
+                }
             }
         }
     }

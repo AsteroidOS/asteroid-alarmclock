@@ -24,111 +24,88 @@ import org.asteroid.controls 1.0
 
 Rectangle {
     id: root
-
-    property int hour: 0
-    property int minute: 0
-    property bool mode24Hour
-
-    property alias enableMonday:    buttonDayMon.checked;
-    property alias enableTuesday:   buttonDayTue.checked;
-    property alias enableWednesday: buttonDayWed.checked;
-    property alias enableThursday:  buttonDayThu.checked;
-    property alias enableFriday:    buttonDayFri.checked;
-    property alias enableSaturday:  buttonDaySat.checked;
-    property alias enableSunday:    buttonDaySun.checked;
-
-    property bool editingAlarm:      false;
-    property var editIndexRelay
-    property var dateTime
-
-    function update() {
-        var time = wallClock.time;
-        dateTime = new Date(time.getFullYear(), time.getMonth(), time.getDate(), time.getHours(), time.getMinutes(), time.getSeconds());
-    }
-
-    Component.onCompleted: update()
-
-    WallClock {
-        id: wallClock
-        enabled: true
-        updateFrequency: WallClock.Minute
-        onTimeChanged:  root.update()
-    }
+    property var alarmObject
 
     Label {
-        text: "Select time:"
-        font.pixelSize: 30
+        text: typeof alarmObject === 'undefined' ? "New Alarm" : "Edit Alarm"
+        font.pixelSize: 20
         anchors {
             top: parent.top
-            topMargin: 6
+            topMargin: 5
             horizontalCenter: parent.horizontalCenter
         }
     }
 
     TimePicker {
         id: tp
-        height: parent.height*0.6
-        width: parent.width*0.6
+        height: parent.height*0.75
+        width: parent.width*0.75
         anchors.centerIn: parent
     }
 
+    // TODO: Find a better component for round screens, for example successive buttons in a circle
     Row {
         anchors {
             bottom: parent.bottom
             right: parent.right
             left: parent.left
         }
-        height: 55
-        Button { id: buttonDayMon; text: "Mon"; checkable: true; width: parent.width/7 }
-        Button { id: buttonDayTue; text: "Tue"; checkable: true; width: parent.width/7 }
-        Button { id: buttonDayWed; text: "Wed"; checkable: true; width: parent.width/7 }
-        Button { id: buttonDayThu; text: "Thu"; checkable: true; width: parent.width/7 }
-        Button { id: buttonDayFri; text: "Fri"; checkable: true; width: parent.width/7 }
-        Button { id: buttonDaySat; text: "Sat"; checkable: true; width: parent.width/7 }
-        Button { id: buttonDaySun; text: "Sun"; checkable: true; width: parent.width/7 }
+        height: 30
+        Button { id: buttonDayMon; text: "Mon"; checkable: true; checked: false; width: parent.width/7 }
+        Button { id: buttonDayTue; text: "Tue"; checkable: true; checked: false; width: parent.width/7 }
+        Button { id: buttonDayWed; text: "Wed"; checkable: true; checked: false; width: parent.width/7 }
+        Button { id: buttonDayThu; text: "Thu"; checkable: true; checked: false; width: parent.width/7 }
+        Button { id: buttonDayFri; text: "Fri"; checkable: true; checked: false; width: parent.width/7 }
+        Button { id: buttonDaySat; text: "Sat"; checkable: true; checked: false; width: parent.width/7 }
+        Button { id: buttonDaySun; text: "Sun"; checkable: true; checked: false; width: parent.width/7 }
     }
 
     IconButton {
         id: acceptButton
         iconColor: "black"
         iconName: "checkmark-circled"
-
-        anchors {
-            verticalCenter: parent.verticalCenter
-            leftMargin: Units.dp(4)
-            left: parent.left
-        }
+        anchors.centerIn: parent
 
         onClicked: {
-            root.hour = tp.hours
-            root.minute = tp.minutes
-            root.visible = false
+            if(typeof alarmObject !== 'undefined') alarmObject.deleteAlarm();
+
+            var daysString = "";
+            if(buttonDayMon.checked) daysString = "m"
+            if(buttonDayTue.checked) daysString = daysString + "t"
+            if(buttonDayWed.checked) daysString = daysString + "w"
+            if(buttonDayThu.checked) daysString = daysString + "T"
+            if(buttonDayFri.checked) daysString = daysString + "f"
+            if(buttonDaySat.checked) daysString = daysString + "s"
+            if(buttonDaySun.checked) daysString = daysString + "S"
+
+            var alarm = alarmModel.createAlarm();
+            alarm.hour = tp.hours;
+            alarm.minute = tp.minutes;
+            alarm.title = daysString;
+            alarm.daysOfWeek = daysString;
+            alarm.enabled = true;
+            alarm.save();
         }
     }
 
-    IconButton {
-        id: rejectButton
-        iconColor: "black"
-        iconName: "cancel"
+    WallClock { id: wallClock }
 
-        anchors {
-            verticalCenter: parent.verticalCenter
-            rightMargin: Units.dp(4)
-            right: parent.right
+    Component.onCompleted: {
+        if (typeof alarmObject === 'undefined') {
+            tp.hours   = wallClock.time.getHours();
+            tp.minutes = wallClock.time.getMinutes();
         }
+        else {
+            tp.hours   = alarmObject.hour;
+            tp.minutes = alarmObject.minute;
 
-        onClicked: {
-            editingAlarm = false;
-//            TH.restoreIndex(tumbler);
-            root.visible = false
+            buttonDayMon.checked = ( alarmObject.daysOfWeek.indexOf("m") >= 0 ? true : false );
+            buttonDayTue.checked = ( alarmObject.daysOfWeek.indexOf("t") >= 0 ? true : false );
+            buttonDayWed.checked = ( alarmObject.daysOfWeek.indexOf("w") >= 0 ? true : false );
+            buttonDayThu.checked = ( alarmObject.daysOfWeek.indexOf("T") >= 0 ? true : false );
+            buttonDayFri.checked = ( alarmObject.daysOfWeek.indexOf("f") >= 0 ? true : false );
+            buttonDaySat.checked = ( alarmObject.daysOfWeek.indexOf("s") >= 0 ? true : false );
+            buttonDaySun.checked = ( alarmObject.daysOfWeek.indexOf("S") >= 0 ? true : false );
         }
-    }
-
-    onHourChanged: {
-        tp.hours = root.hour
-    }
-
-    onMinuteChanged: {
-        tp.minutes = root.minute
     }
 }

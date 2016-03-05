@@ -20,129 +20,50 @@ import QtQuick 2.4
 import QtQuick.Controls 1.3
 import org.nemomobile.alarms 1.0
 import org.asteroid.controls 1.0
-import "clockHelper.js" as CH
 
 Application {
     id: app
 
-    property bool populated: false
+    Component  { id: timePickerLayer;  AlarmTimePickerDialog { } }
+    Component  { id: alarmDialogLayer; AlarmDialog           { } }
+    LayerStack { id: layerStack }
 
-    Label {
-        anchors.centerIn: parent
-        text: "No alarms"
-        visible: !populated
+    AlarmsModel  { id: alarmModel }
+    AlarmHandler {
+        onError: console.log("asteroid-alarmclock: error in AlarmHandler: " + message);
+        onAlarmReady: if(alarmModel.populated) layerStack.push(alarmDialogLayer, {"alarmObject": alarm})
     }
 
     Flickable {
-        id: listViewFlickable
-        clip: true
-        contentHeight: alarmModel.count *  82 + 2
+        contentHeight: col.height
         contentWidth: width
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
         anchors.fill: parent
         Column {
+            id: col
+            width: parent.width
             AlarmViewRepeater {
                 id: alarmList
-                onEditClicked: CH.launchDialog(false, alarmObject, index, tDialog);
-                model: ListModel {
-                    id: alarmModel
-                    property var alarmName
-                    property var alarmTime
-                    property var alarmObject
-                    property var alarmEnabled
-                    property bool markedForDeletion
-                }
+                model: alarmModel
+                onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
             }
-        }
-    }
-
-    IconButton {
-        id: buttonNewAlarm
-        iconColor: "black"
-        iconName: alarmList.deletionEnabled ? "cancel" : "add";
-
-        anchors {
-            verticalCenter: parent.verticalCenter
-            leftMargin: Units.dp(8)
-            left: parent.left
-        }
-
-        onClicked: {
-            if (alarmList.deletionEnabled) {
-                alarmList.deletionEnabled = false
-                CH.clearDeletionMarkers(alarmModel);
+            
+            Label {
+                text: "No alarms"
+                font.pixelSize: Units.dp(14)
+                visible: alarmModel.populated && alarmList.count === 0
+                anchors.horizontalCenter: parent.horizontalCenter
             }
-            else {
-                CH.launchDialog(true, 0, -1, tDialog);
+
+            IconButton {
+                id: newAlarmBtn
+                iconColor: "black"
+                iconName:  "add"
+                visible: alarmModel.populated
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: layerStack.push(timePickerLayer)
             }
-        }
-    }
-
-    IconButton {
-        id: buttonDeleteAlarm
-        iconColor: "black"
-        iconName: alarmList.deletionEnabled ? "done" : "delete";
-
-        anchors {
-            verticalCenter: parent.verticalCenter
-            rightMargin: Units.dp(8)
-            right: parent.right
-        }
-
-        onClicked: {
-            if(!alarmList.deletionEnabled)
-                alarmList.deletionEnabled = true;
-            else {
-                CH.deleteSelectedItems(alarmModel);
-                alarmList.deletionEnabled = false;
-            }
-        }
-    }
-
-    AlarmTimePickerDialog {
-        id: tDialog
-        anchors.fill: parent
-        visible: false
-
-/*        onAccepted: {
-            if(editingAlarm){
-                alarmModel.remove(editIndexRelay);
-            }
-            CH.callbackFunction(tDialog, alarmModel, systemAlarmModel);
-        }*/
-    }
-
-    AlarmsModel {
-        id: systemAlarmModel
-
-        onPopulatedChanged: app.populated = true
-    }
-
-    AlarmHandler {
-        id: systemAlarmHandler
-
-        onError: console.log(" +++Error in AlarmHandler: " + message);
-        onAlarmReady: {
-            console.log(" +++Alarm ready: " + alarm.hour + ":" + alarm.minute + " at " + alarm.title);
-            if(app.populated) {
-                alarmDialog.alarmName = CH.parseAlarmTitle(alarm.title);
-                alarmDialog.alarmTime = CH.twoDigits(alarm.hour) + ":" + CH.twoDigits(alarm.minute);
-                alarmDialog.alarmObject = alarm;
-                alarmDialog.visible = true;
-            }
-        }
-    }
-
-    AlarmDialog {
-        id: alarmDialog
-        anchors.fill: parent
-        visible: false
-
-        onAlarmSnoozeClicked: alarmObject.snooze();
-        onAlarmDisableClicked: {
-            CH.updateAlarmEnabledStatus(alarmObject, alarmModel);
-            alarmObject.dismiss();
         }
     }
 }
