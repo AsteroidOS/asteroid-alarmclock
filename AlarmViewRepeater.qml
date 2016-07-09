@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.3
 import org.asteroid.controls 1.0
 
 Repeater {
@@ -79,6 +78,7 @@ Repeater {
 
         Switch {
             id: enableSwitch
+            width: 80
             Component.onCompleted: enableSwitch.checked = alarm.enabled
             onCheckedChanged: {
                 alarm.enabled = enableSwitch.checked
