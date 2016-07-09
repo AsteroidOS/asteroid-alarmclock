@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
 import org.nemomobile.alarms 1.0
 import org.asteroid.controls 1.0
 
@@ -49,7 +48,7 @@ Application {
                 onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
             }
             
-            Label {
+            Text {
                 text: "No alarms"
                 font.pixelSize: Units.dp(14)
                 visible: alarmModel.populated && alarmList.count === 0

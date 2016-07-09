@@ -18,7 +18,6 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 1.3
-import QtQuick.Controls.Styles 1.0
 import org.asteroid.controls 1.0
 
 Repeater {

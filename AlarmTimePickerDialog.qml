@@ -18,7 +18,6 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0
-import QtQuick.Controls.Styles 1.0
 import org.nemomobile.time 1.0
 import org.asteroid.controls 1.0
 
@@ -26,7 +25,7 @@ Rectangle {
     id: root
     property var alarmObject
 
-    Label {
+    Text {
         text: typeof alarmObject === 'undefined' ? "New Alarm" : "Edit Alarm"
         font.pixelSize: 20
         anchors {
