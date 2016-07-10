@@ -25,44 +25,110 @@ Rectangle {
     property var alarmObject
 
     Text {
+        id: title
         text: typeof alarmObject === 'undefined' ? "New Alarm" : "Edit Alarm"
-        font.pixelSize: 20
-        anchors {
-            top: parent.top
-            topMargin: 5
-            horizontalCenter: parent.horizontalCenter
-        }
+        height: parent.height*0.15
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
     }
 
-    TimePicker {
-        id: tp
-        height: parent.height*0.75
-        width: parent.width*0.75
-        anchors.centerIn: parent
-    }
-
-    // TODO: Find a better component for round screens, for example successive buttons in a circle
     Row {
-        anchors {
-            bottom: parent.bottom
-            right: parent.right
-            left: parent.left
+        id: firstDaysRow
+        anchors.top: title.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        height: parent.height*0.1
+        width: parent.width/7*3
+        DayButton { id: buttonDayMon; day: 1; checked: false; width: parent.width/3; height: firstDaysRow.height }
+        DayButton { id: buttonDayTue; day: 2; checked: false; width: parent.width/3; height: firstDaysRow.height }
+        DayButton { id: buttonDayWed; day: 3; checked: false; width: parent.width/3; height: firstDaysRow.height }
+    }
+    Row {
+        id: secondDaysRow
+        anchors.top: firstDaysRow.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        height: parent.height*0.1
+        width: parent.width/7*4
+        DayButton { id: buttonDayThu; day: 4; checked: false; width: parent.width/4; height: secondDaysRow.height }
+        DayButton { id: buttonDayFri; day: 5; checked: false; width: parent.width/4; height: secondDaysRow.height }
+        DayButton { id: buttonDaySat; day: 6; checked: false; width: parent.width/4; height: secondDaysRow.height }
+        DayButton { id: buttonDaySun; day: 7; checked: false; width: parent.width/4; height: secondDaysRow.height }
+    }
+
+    Row {
+        id: timeSelector
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: secondDaysRow.bottom
+        anchors.topMargin: parent.height*0.05
+        height: parent.height*0.4
+
+        ListView {
+            id: hourLV
+            height: parent.height
+            width: parent.width/2-1
+            clip: true
+            spacing: 15
+            model: 24
+            delegate: Item {
+                width: hourLV.width
+                height: 30
+                Text {
+                    text: index
+                    anchors.centerIn: parent
+                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                    Behavior on scale { NumberAnimation { duration: 200 } }
+                    Behavior on color { ColorAnimation { } }
+                }
+            }
+            preferredHighlightBegin: height / 2 - 15
+            preferredHighlightEnd: height / 2 + 15
+            highlightRangeMode: ListView.StrictlyEnforceRange
         }
-        height: 30
-        DayButton { id: buttonDayMon; day: 1; checked: false; width: parent.width/7; height: 30 }
-        DayButton { id: buttonDayTue; day: 2; checked: false; width: parent.width/7; height: 30 }
-        DayButton { id: buttonDayWed; day: 3; checked: false; width: parent.width/7; height: 30 }
-        DayButton { id: buttonDayThu; day: 4; checked: false; width: parent.width/7; height: 30 }
-        DayButton { id: buttonDayFri; day: 5; checked: false; width: parent.width/7; height: 30 }
-        DayButton { id: buttonDaySat; day: 6; checked: false; width: parent.width/7; height: 30 }
-        DayButton { id: buttonDaySun; day: 7; checked: false; width: parent.width/7; height: 30 }
+
+        Rectangle {
+            width: 1
+            height: parent.height*0.8
+            color: "grey"
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        ListView {
+            id: minuteLV
+            height: parent.height
+            width: parent.width/2-1
+            clip: true
+            spacing: 15
+            model: 60
+            delegate: Item {
+                width: minuteLV.width
+                height: 30
+                Text {
+                    text: index
+                    anchors.centerIn: parent
+                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                    Behavior on scale { NumberAnimation { duration: 200 } }
+                    Behavior on color { ColorAnimation { } }
+                }
+            }
+            preferredHighlightBegin: height / 2 - 15
+            preferredHighlightEnd: height / 2 + 15
+            highlightRangeMode: ListView.StrictlyEnforceRange
+        }
     }
 
     IconButton {
-        id: acceptButton
+        height: parent.height*0.2
+        width: height
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: parent.bottom
+
         iconColor: "black"
         iconName: "checkmark-circled"
-        anchors.centerIn: parent
 
         onClicked: {
             if(typeof alarmObject !== 'undefined') alarmObject.deleteAlarm();
@@ -77,8 +143,8 @@ Rectangle {
             if(buttonDaySun.checked) daysString = daysString + "S"
 
             var alarm = alarmModel.createAlarm();
-            alarm.hour = tp.hours;
-            alarm.minute = tp.minutes;
+            alarm.hour = hourLV.currentIndex;
+            alarm.minute = minuteLV.currentIndex;
             alarm.title = daysString;
             alarm.daysOfWeek = daysString;
             alarm.enabled = true;
@@ -90,12 +156,12 @@ Rectangle {
 
     Component.onCompleted: {
         if (typeof alarmObject === 'undefined') {
-            tp.hours   = wallClock.time.getHours();
-            tp.minutes = wallClock.time.getMinutes();
+            hourLV.currentIndex = wallClock.time.getHours();
+            minuteLV.currentIndex = wallClock.time.getMinutes();
         }
         else {
-            tp.hours   = alarmObject.hour;
-            tp.minutes = alarmObject.minute;
+            hourLV.currentIndex   = alarmObject.hour;
+            minuteLV.currentIndex = alarmObject.minute;
 
             buttonDayMon.checked = ( alarmObject.daysOfWeek.indexOf("m") >= 0 ? true : false );
             buttonDayTue.checked = ( alarmObject.daysOfWeek.indexOf("t") >= 0 ? true : false );
