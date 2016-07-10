@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0
 import org.nemomobile.time 1.0
 import org.asteroid.controls 1.0
 
@@ -50,13 +49,13 @@ Rectangle {
             left: parent.left
         }
         height: 30
-        Button { id: buttonDayMon; text: "Mon"; checkable: true; checked: false; width: parent.width/7 }
-        Button { id: buttonDayTue; text: "Tue"; checkable: true; checked: false; width: parent.width/7 }
-        Button { id: buttonDayWed; text: "Wed"; checkable: true; checked: false; width: parent.width/7 }
-        Button { id: buttonDayThu; text: "Thu"; checkable: true; checked: false; width: parent.width/7 }
-        Button { id: buttonDayFri; text: "Fri"; checkable: true; checked: false; width: parent.width/7 }
-        Button { id: buttonDaySat; text: "Sat"; checkable: true; checked: false; width: parent.width/7 }
-        Button { id: buttonDaySun; text: "Sun"; checkable: true; checked: false; width: parent.width/7 }
+        DayButton { id: buttonDayMon; day: 1; checked: false; width: parent.width/7; height: 30 }
+        DayButton { id: buttonDayTue; day: 2; checked: false; width: parent.width/7; height: 30 }
+        DayButton { id: buttonDayWed; day: 3; checked: false; width: parent.width/7; height: 30 }
+        DayButton { id: buttonDayThu; day: 4; checked: false; width: parent.width/7; height: 30 }
+        DayButton { id: buttonDayFri; day: 5; checked: false; width: parent.width/7; height: 30 }
+        DayButton { id: buttonDaySat; day: 6; checked: false; width: parent.width/7; height: 30 }
+        DayButton { id: buttonDaySun; day: 7; checked: false; width: parent.width/7; height: 30 }
     }
 
     IconButton {
