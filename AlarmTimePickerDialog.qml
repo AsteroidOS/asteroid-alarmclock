@@ -149,7 +149,6 @@ Rectangle {
             alarm.title = daysString;
             alarm.daysOfWeek = daysString;
             alarm.enabled = true;
-            alarm.save();
 
             root.pop();
         }
