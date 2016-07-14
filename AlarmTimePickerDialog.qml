@@ -166,13 +166,13 @@ Rectangle {
             hourLV.currentIndex   = alarmObject.hour;
             minuteLV.currentIndex = alarmObject.minute;
 
-            buttonDayMon.checked = ( alarmObject.daysOfWeek.indexOf("m") >= 0 ? true : false );
-            buttonDayTue.checked = ( alarmObject.daysOfWeek.indexOf("t") >= 0 ? true : false );
-            buttonDayWed.checked = ( alarmObject.daysOfWeek.indexOf("w") >= 0 ? true : false );
-            buttonDayThu.checked = ( alarmObject.daysOfWeek.indexOf("T") >= 0 ? true : false );
-            buttonDayFri.checked = ( alarmObject.daysOfWeek.indexOf("f") >= 0 ? true : false );
-            buttonDaySat.checked = ( alarmObject.daysOfWeek.indexOf("s") >= 0 ? true : false );
-            buttonDaySun.checked = ( alarmObject.daysOfWeek.indexOf("S") >= 0 ? true : false );
+            buttonDayMon.checked = alarmObject.daysOfWeek.indexOf("m") >= 0;
+            buttonDayTue.checked = alarmObject.daysOfWeek.indexOf("t") >= 0;
+            buttonDayWed.checked = alarmObject.daysOfWeek.indexOf("w") >= 0;
+            buttonDayThu.checked = alarmObject.daysOfWeek.indexOf("T") >= 0;
+            buttonDayFri.checked = alarmObject.daysOfWeek.indexOf("f") >= 0;
+            buttonDaySat.checked = alarmObject.daysOfWeek.indexOf("s") >= 0;
+            buttonDaySun.checked = alarmObject.daysOfWeek.indexOf("S") >= 0;
         }
     }
 }
