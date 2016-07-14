@@ -23,6 +23,7 @@ import org.asteroid.controls 1.0
 Rectangle {
     id: root
     property var alarmObject
+    property var pop
 
     Text {
         id: title
@@ -149,6 +150,8 @@ Rectangle {
             alarm.daysOfWeek = daysString;
             alarm.enabled = true;
             alarm.save();
+
+            root.pop();
         }
     }
 
