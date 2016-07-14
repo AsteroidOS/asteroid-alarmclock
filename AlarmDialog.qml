@@ -40,6 +40,7 @@ Rectangle {
     IconButton {
         id: alarmDisable
         iconColor: "white"
+        pressedIconColor: "lightgrey"
         iconName: "sunny"
 
         anchors {
@@ -67,6 +68,7 @@ Rectangle {
     IconButton {
         id: alarmSnooze
         iconColor: "white"
+        pressedIconColor: "lightgrey"
         iconName: "moon"
 
         anchors {
