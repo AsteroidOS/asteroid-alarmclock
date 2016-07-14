@@ -23,10 +23,12 @@ Item {
     property bool checked: false
 
     Rectangle {
+        anchors.margins: 2
         anchors.fill: parent
         color: checked ? "lightgrey" : "transparent"
         border.width: 1
         border.color: "grey"
+        radius: width/2
     }
 
     Text {

@@ -40,8 +40,8 @@ Rectangle {
         id: firstDaysRow
         anchors.top: title.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        height: parent.height*0.1
-        width: parent.width/7*3
+        height: parent.height*0.16
+        width: height*3
         DayButton { id: buttonDayMon; day: 1; checked: false; width: parent.width/3; height: firstDaysRow.height }
         DayButton { id: buttonDayTue; day: 2; checked: false; width: parent.width/3; height: firstDaysRow.height }
         DayButton { id: buttonDayWed; day: 3; checked: false; width: parent.width/3; height: firstDaysRow.height }
@@ -50,8 +50,8 @@ Rectangle {
         id: secondDaysRow
         anchors.top: firstDaysRow.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        height: parent.height*0.1
-        width: parent.width/7*4
+        height: parent.height*0.16
+        width: height*4
         DayButton { id: buttonDayThu; day: 4; checked: false; width: parent.width/4; height: secondDaysRow.height }
         DayButton { id: buttonDayFri; day: 5; checked: false; width: parent.width/4; height: secondDaysRow.height }
         DayButton { id: buttonDaySat; day: 6; checked: false; width: parent.width/4; height: secondDaysRow.height }
@@ -64,14 +64,14 @@ Rectangle {
         anchors.right: parent.right
         anchors.top: secondDaysRow.bottom
         anchors.topMargin: parent.height*0.05
-        height: parent.height*0.4
+        height: parent.height*0.28
 
         ListView {
             id: hourLV
             height: parent.height
             width: parent.width/2-1
             clip: true
-            spacing: 15
+            spacing: 6
             model: 24
             delegate: Item {
                 width: hourLV.width
@@ -102,7 +102,7 @@ Rectangle {
             height: parent.height
             width: parent.width/2-1
             clip: true
-            spacing: 15
+            spacing: 6
             model: 60
             delegate: Item {
                 width: minuteLV.width
@@ -123,13 +123,26 @@ Rectangle {
     }
 
     IconButton {
+        iconName: "delete"
+        visible: typeof alarmObject !== 'undefined'
+        anchors.right: parent.horizontalCenter
+        anchors.rightMargin: 5
+        anchors.bottom: parent.bottom
+        onClicked: {
+            alarmObject.deleteAlarm()
+            root.pop()
+        }
+    }
+
+    IconButton {
         height: parent.height*0.2
         width: height
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.left: typeof alarmObject !== 'undefined' ? parent.horizontalCenter : null
+        anchors.leftMargin: 5
+        anchors.horizontalCenter: typeof alarmObject !== 'undefined' ? null : parent.horizontalCenter
         anchors.bottom: parent.bottom
 
-        iconColor: "black"
-        iconName: "checkmark-circled"
+        iconName: typeof alarmObject !== 'undefined' ? "create" : "add-circle"
 
         onClicked: {
             if(typeof alarmObject !== 'undefined') alarmObject.deleteAlarm();

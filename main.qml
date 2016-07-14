@@ -39,6 +39,7 @@ Application {
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
         anchors.fill: parent
+        interactive: alarmModel.populated && alarmList.count !== 0
         Column {
             id: col
             width: parent.width
@@ -47,13 +48,8 @@ Application {
                 model: alarmModel
                 onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
             }
-            
-            Text {
-                text: "No alarms"
-                font.pixelSize: Units.dp(14)
-                visible: alarmModel.populated && alarmList.count === 0
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
+
+            Item { width: parent.width; height: Units.dp(8) }
 
             IconButton {
                 id: newAlarmBtn
@@ -64,5 +60,12 @@ Application {
                 onClicked: layerStack.push(timePickerLayer)
             }
         }
+    }
+
+    Text {
+        text: "No alarms"
+        font.pixelSize: Units.dp(14)
+        visible: alarmModel.populated && alarmList.count === 0
+        anchors.centerIn: parent
     }
 }

@@ -52,7 +52,6 @@ Repeater {
         height: 82
         width: app.width
         onClicked: editClicked(alarm);
-        onPressAndHold: removeChoice.visible = true
 
         Text {
             id: timeField
@@ -89,44 +88,6 @@ Repeater {
                 rightMargin: 30
                 top: parent.top
                 bottom: daysField.top
-            }
-        }
-
-        Rectangle {
-            id: removeChoice
-            color: "red"
-            anchors.fill: parent
-            visible: false
-
-            MouseArea {
-                anchors.fill: parent
-                IconButton {
-                    iconColor: "black"
-                    iconName: "cancel"
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        leftMargin: Units.dp(4)
-                        left: parent.left
-                    }
-                    onClicked: removeChoice.visible = false
-                }
-                        
-                Text {
-                    text: "Remove ?"
-                    font.pixelSize: 35
-                    anchors.centerIn: parent
-                }
-
-                IconButton {
-                    iconColor: "black"
-                    iconName: "delete"
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        rightMargin: Units.dp(4)
-                        right: parent.right
-                    }
-                    onClicked: alarm.deleteAlarm() // TODO: this seems to be messy, we might have to change the model too
-                }
             }
         }
     }
