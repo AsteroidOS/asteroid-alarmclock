@@ -11,6 +11,14 @@ OTHER_FILES += main.qml \
                AlarmDialog.qml \
                AlarmViewRepeater.qml
 
+lupdate_only{
+    SOURCES = main.qml \
+              DayButton.qml \
+              AlarmTimePickerDialog.qml \
+              AlarmDialog.qml \
+              AlarmViewRepeater.qml
+}
+
 TARGET = asteroid-alarmclock
 target.path = /usr/bin/
 

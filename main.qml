@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
+ *               2015 - Florent Revest <revestflo@gmail.com>
  *               2013 - Santtu Mansikkamaa <santtu.mansikkamaa@nomovok.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -63,7 +64,7 @@ Application {
     }
 
     Text {
-        text: "No alarms"
+        text: qsTr("No alarms")
         font.pixelSize: Units.dp(14)
         visible: alarmModel.populated && alarmList.count === 0
         anchors.centerIn: parent
