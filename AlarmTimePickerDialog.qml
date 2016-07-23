@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
+ *               2015 - Florent Revest <revestflo@gmail.com>
  *               2013 - Santtu Mansikkamaa <santtu.mansikkamaa@nomovok.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -27,7 +28,7 @@ Rectangle {
 
     Text {
         id: title
-        text: typeof alarmObject === 'undefined' ? "New Alarm" : "Edit Alarm"
+        text: typeof alarmObject === 'undefined' ? qsTr("New Alarm") : qsTr("Edit Alarm")
         height: parent.height*0.15
         anchors.top: parent.top
         anchors.left: parent.left

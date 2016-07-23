@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
+ *               2015 - Florent Revest <revestflo@gmail.com>
  *               2013 - Santtu Mansikkamaa <santtu.mansikkamaa@nomovok.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -28,22 +29,20 @@ Repeater {
     }
 
     function parseAlarmTitle(title) {
-        if      (title === "")        return "Once";
-        else if (title === "mtwTf")   return "Weekdays";
-        else if (title === "sS")      return "Weekends";
-        else if (title === "mtwTfsS") return "Every day";
+        if      (title === "")        return qsTr("Once");
+        else if (title === "mtwTf")   return qsTr("Weekdays");
+        else if (title === "sS")      return qsTr("Weekends");
+        else if (title === "mtwTfsS") return qsTr("Every day");
         else {
             var returnString = "";
-            if (title.indexOf("m") >= 0) returnString = "Mon, ";
-            if (title.indexOf("t") >= 0) returnString = returnString + "Tue, ";
-            if (title.indexOf("w") >= 0) returnString = returnString + "Wed, ";
-            if (title.indexOf("T") >= 0) returnString = returnString + "Thu, ";
-            if (title.indexOf("f") >= 0) returnString = returnString + "Fri, ";
-            if (title.indexOf("s") >= 0) returnString = returnString + "Sat, ";
-            if (title.indexOf("S") >= 0) returnString = returnString + "Sun";
-            if ((returnString.indexOf(", ") >= 0) && (returnString.indexOf("Sun") === -1))
-                returnString = returnString.slice(0, returnString.length-2);
-            return returnString;
+            if (title.indexOf("m") >= 0) returnString = Qt.locale().dayName(1, Locale.ShortFormat) + ", ";
+            if (title.indexOf("t") >= 0) returnString = returnString + Qt.locale().dayName(2, Locale.ShortFormat) + ", ";
+            if (title.indexOf("w") >= 0) returnString = returnString + Qt.locale().dayName(3, Locale.ShortFormat) + ", ";
+            if (title.indexOf("T") >= 0) returnString = returnString + Qt.locale().dayName(4, Locale.ShortFormat) + ", ";
+            if (title.indexOf("f") >= 0) returnString = returnString + Qt.locale().dayName(5, Locale.ShortFormat) + ", ";
+            if (title.indexOf("s") >= 0) returnString = returnString + Qt.locale().dayName(6, Locale.ShortFormat) + ", ";
+            if (title.indexOf("S") >= 0) returnString = returnString + Qt.locale().dayName(7, Locale.ShortFormat);
+            return returnString.replace(/, $/, "");
         }
     }
 
