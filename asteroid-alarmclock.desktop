@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Alarm Clock
+Name[nl_NL]=Wekker
 Categories=Applications;
 Exec=invoker --type=qtcomponents-qt5 /usr/bin/asteroid-alarmclock
 Icon=mate-panel-clock

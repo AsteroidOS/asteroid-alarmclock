@@ -19,6 +19,8 @@ lupdate_only{
               AlarmViewRepeater.qml
 }
 
+TRANSLATIONS = asteroid-alarmclock.nl_NL.ts
+
 TARGET = asteroid-alarmclock
 target.path = /usr/bin/
 
