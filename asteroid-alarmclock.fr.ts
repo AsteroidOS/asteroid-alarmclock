@@ -6,12 +6,12 @@
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"></location>
         <source>New Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle Alarme</translation>
     </message>
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"></location>
         <source>Edit Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Édition d'alarme</translation>
     </message>
 </context>
 <context>
@@ -19,22 +19,22 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="32"></location>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Une seule fois</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"></location>
         <source>Weekdays</source>
-        <translation type="unfinished"></translation>
+        <translation>Jours de la semaine</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"></location>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>Weekends</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"></location>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation>Tous les jours</translation>
     </message>
 </context>
 <context>
@@ -42,7 +42,7 @@
     <message>
         <location filename="main.qml" line="67"></location>
         <source>No alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas d'alarme</translation>
     </message>
 </context>
 </TS>
