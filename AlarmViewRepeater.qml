@@ -29,10 +29,10 @@ Repeater {
     }
 
     function parseAlarmTitle(title) {
-        if      (title === "")        return "Once";
-        else if (title === "mtwTf")   return "Weekdays";
-        else if (title === "sS")      return "Weekends";
-        else if (title === "mtwTfsS") return "Every day";
+        if      (title === "")        return qsTr("Once");
+        else if (title === "mtwTf")   return qsTr("Weekdays");
+        else if (title === "sS")      return qsTr("Weekends");
+        else if (title === "mtwTfsS") return qsTr("Every day");
         else {
             var returnString = "";
             if (title.indexOf("m") >= 0) returnString = Qt.locale().dayName(1, Locale.ShortFormat) + ", ";
