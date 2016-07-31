@@ -29,10 +29,10 @@ Repeater {
     }
 
     function parseAlarmTitle(title) {
-        if      (title === "")        return qsTr("Once");
-        else if (title === "mtwTf")   return qsTr("Weekdays");
-        else if (title === "sS")      return qsTr("Weekends");
-        else if (title === "mtwTfsS") return qsTr("Every day");
+        if      (title === "")        return "Once";
+        else if (title === "mtwTf")   return "Weekdays";
+        else if (title === "sS")      return "Weekends";
+        else if (title === "mtwTfsS") return "Every day";
         else {
             var returnString = "";
             if (title.indexOf("m") >= 0) returnString = Qt.locale().dayName(1, Locale.ShortFormat) + ", ";
@@ -56,6 +56,7 @@ Repeater {
             id: timeField
             text: twoDigits(alarm.hour) + ":" + twoDigits(alarm.minute);
             font.pixelSize: 35
+            color: "white"
             anchors {
                 bottom: parent.verticalCenter
                 left: parent.left
@@ -67,6 +68,7 @@ Repeater {
             id: daysField
             text: parseAlarmTitle(alarm.title);
             styleColor: "lightgrey"
+            color: "white"
             font.pixelSize: 16
             anchors {
                 top: parent.verticalCenter

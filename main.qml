@@ -23,6 +23,13 @@ import org.asteroid.controls 1.0
 
 Application {
     id: app
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#f69a3e" }
+            GradientStop { position: 1.0; color: "#d63800" }
+        }
+    }
 
     Component  { id: timePickerLayer;  AlarmTimePickerDialog { } }
     Component  { id: alarmDialogLayer; AlarmDialog           { } }
@@ -54,7 +61,8 @@ Application {
 
             IconButton {
                 id: newAlarmBtn
-                iconColor: "black"
+                iconColor: "white"
+                pressedIconColor: "lightgrey"
                 iconName:  "add"
                 visible: alarmModel.populated
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -65,6 +73,7 @@ Application {
 
     Text {
         text: qsTr("No alarms")
+        color: "white"
         font.pixelSize: Units.dp(14)
         visible: alarmModel.populated && alarmList.count === 0
         anchors.centerIn: parent

@@ -26,8 +26,17 @@ Rectangle {
     property var alarmObject
     property var pop
 
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#f69a3e" }
+            GradientStop { position: 1.0; color: "#d63800" }
+        }
+    }
+
     Text {
         id: title
+        color: "white"
         text: typeof alarmObject === 'undefined' ? qsTr("New Alarm") : qsTr("Edit Alarm")
         height: parent.height*0.15
         anchors.top: parent.top
@@ -80,7 +89,7 @@ Rectangle {
                 Text {
                     text: index
                     anchors.centerIn: parent
-                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
                     scale: parent.ListView.isCurrentItem ? 1.5 : 1
                     Behavior on scale { NumberAnimation { duration: 200 } }
                     Behavior on color { ColorAnimation { } }
@@ -94,7 +103,7 @@ Rectangle {
         Rectangle {
             width: 1
             height: parent.height*0.8
-            color: "grey"
+            color: "lightgrey"
             anchors.verticalCenter: parent.verticalCenter
         }
 
@@ -111,7 +120,7 @@ Rectangle {
                 Text {
                     text: index
                     anchors.centerIn: parent
-                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
                     scale: parent.ListView.isCurrentItem ? 1.5 : 1
                     Behavior on scale { NumberAnimation { duration: 200 } }
                     Behavior on color { ColorAnimation { } }
@@ -125,6 +134,8 @@ Rectangle {
 
     IconButton {
         iconName: "delete"
+        iconColor: "white"
+        pressedIconColor: "lightgrey"
         visible: typeof alarmObject !== 'undefined'
         anchors.right: parent.horizontalCenter
         anchors.rightMargin: 5
@@ -144,6 +155,8 @@ Rectangle {
         anchors.bottom: parent.bottom
 
         iconName: typeof alarmObject !== 'undefined' ? "create" : "add-circle"
+        iconColor: "white"
+        pressedIconColor: "lightgrey"
 
         onClicked: {
             if(typeof alarmObject !== 'undefined') alarmObject.deleteAlarm();
