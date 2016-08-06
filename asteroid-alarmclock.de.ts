@@ -24,17 +24,17 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"></location>
         <source>Weekdays</source>
-        <translation>Wochentage</translation>
+        <translation type="unfinished">Wochentage</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"></location>
         <source>Weekends</source>
-        <translation>Wochenenden</translation>
+        <translation type="unfinished">Wochenenden</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"></location>
         <source>Every day</source>
-        <translation>Jeden Tag</translation>
+        <translation>Täglich</translation>
     </message>
 </context>
 <context>
