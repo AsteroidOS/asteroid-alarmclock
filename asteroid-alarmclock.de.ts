@@ -1,15 +1,15 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="de_DE">
 <context>
     <name>AlarmTimePickerDialog</name>
     <message>
-        <location filename="AlarmTimePickerDialog.qml" line="31"></location>
+        <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>New Alarm</source>
         <translation>Neuer Wecker</translation>
     </message>
     <message>
-        <location filename="AlarmTimePickerDialog.qml" line="31"></location>
+        <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>Edit Alarm</source>
         <translation>Wecker bearbeiten</translation>
     </message>
@@ -17,22 +17,22 @@
 <context>
     <name>AlarmViewRepeater</name>
     <message>
-        <location filename="AlarmViewRepeater.qml" line="32"></location>
+        <location filename="AlarmViewRepeater.qml" line="32"/>
         <source>Once</source>
         <translation>Einmalig</translation>
     </message>
     <message>
-        <location filename="AlarmViewRepeater.qml" line="33"></location>
+        <location filename="AlarmViewRepeater.qml" line="33"/>
         <source>Weekdays</source>
-        <translation type="unfinished">Wochentage</translation>
+        <translation>Unter der Woche</translation>
     </message>
     <message>
-        <location filename="AlarmViewRepeater.qml" line="34"></location>
+        <location filename="AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation type="unfinished">Wochenenden</translation>
+        <translation>An Wochenenden</translation>
     </message>
     <message>
-        <location filename="AlarmViewRepeater.qml" line="35"></location>
+        <location filename="AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
         <translation>Täglich</translation>
     </message>
@@ -40,7 +40,7 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="main.qml" line="67"></location>
+        <location filename="main.qml" line="67"/>
         <source>No alarms</source>
         <translation>Keine Wecker</translation>
     </message>
