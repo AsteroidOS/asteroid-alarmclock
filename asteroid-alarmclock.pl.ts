@@ -24,7 +24,7 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"/>
         <source>Weekdays</source>
-        <translation>Dni pracujące</translation>
+        <translation>Dni robocze</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"/>
