@@ -3,8 +3,9 @@ Type=Application
 Name=Alarm Clock
 Name[de_DE]=Wecker
 Name[es_ES]=Reloj Despertador
-Name[nl_NL]=Wekker
 Name[fr_FR]=Réveil
+Name[nl_NL]=Wekker
+Name[pl_PL]=Alarm
 Categories=Applications;
 Exec=invoker --type=qtcomponents-qt5 /usr/bin/asteroid-alarmclock
 Icon=mate-panel-clock
