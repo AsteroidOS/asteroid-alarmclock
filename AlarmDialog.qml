@@ -17,7 +17,9 @@
  */
 
 import QtQuick 2.0
+import QtFeedback 5.0
 import org.asteroid.controls 1.0
+import org.nemomobile.dbus 1.0
 
 Rectangle {
     id: alarmDialogRoot
@@ -78,5 +80,26 @@ Rectangle {
         }
 
         onClicked: alarmObject.snooze();
+    }
+
+    ThemeEffect {
+         id: haptics
+         effect: "PressStrong"
+     }
+
+    property DBusInterface _dbus: DBusInterface {
+        id: dbus
+
+        destination: "com.nokia.mce"
+        path: "/com/nokia/mce/request"
+        iface: "com.nokia.mce.request"
+
+        busType: DBusInterface.SystemBus
+    }
+
+    Component.onCompleted: {
+        haptics.play()
+        dbus.call("req_display_state_on", undefined)
+        window.raise()
     }
 }
