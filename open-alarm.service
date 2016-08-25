@@ -1,0 +1,9 @@
+[Unit]
+After=pre-user-session.target
+Requires=dbus.socket
+
+[Service]
+Type=dbus
+BusName=com.nokia.voland
+ExecStart=/usr/bin/invoker --type=qtcomponents-qt5 /usr/bin/asteroid-alarmclock
+ExecStop=

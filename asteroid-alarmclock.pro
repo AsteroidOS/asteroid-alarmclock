@@ -25,4 +25,10 @@ target.path = /usr/bin/
 desktop.path = /usr/share/applications
 desktop.files = asteroid-alarmclock.desktop
 
-INSTALLS += target desktop
+systemd.path = /usr/lib/systemd/user/
+systemd.files = open-alarm.service
+
+dbus.path = /usr/share/dbus-1/services
+dbus.files = com.nokia.voland.service
+
+INSTALLS += target desktop dbus systemd
