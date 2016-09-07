@@ -37,7 +37,7 @@ Rectangle {
     Text {
         id: title
         color: "white"
-        text: typeof alarmObject === 'undefined' ? qsTr("New Alarm") : qsTr("Edit Alarm")
+        text: typeof alarmObject === 'undefined' ? qsTr("New Alarm").toUpperCase() : qsTr("Edit Alarm").toUpperCase()
         height: parent.height*0.15
         anchors.top: parent.top
         anchors.left: parent.left
