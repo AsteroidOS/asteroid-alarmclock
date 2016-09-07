@@ -63,7 +63,7 @@ Application {
                 id: newAlarmBtn
                 iconColor: "white"
                 pressedIconColor: "lightgrey"
-                iconName:  "add"
+                iconName:  "ios-add-circle-outline"
                 visible: alarmModel.populated
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: layerStack.push(timePickerLayer)

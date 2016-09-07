@@ -133,7 +133,9 @@ Rectangle {
     }
 
     IconButton {
-        iconName: "delete"
+        height: parent.height*0.2
+        width: height
+        iconName: "ios-close-circle-outline"
         iconColor: "white"
         pressedIconColor: "lightgrey"
         visible: typeof alarmObject !== 'undefined'
@@ -154,7 +156,7 @@ Rectangle {
         anchors.horizontalCenter: typeof alarmObject !== 'undefined' ? null : parent.horizontalCenter
         anchors.bottom: parent.bottom
 
-        iconName: typeof alarmObject !== 'undefined' ? "create" : "add-circle"
+        iconName: typeof alarmObject !== 'undefined' ? "ios-checkmark-circle-outline" : "ios-add-circle-outline"
         iconColor: "white"
         pressedIconColor: "lightgrey"
 

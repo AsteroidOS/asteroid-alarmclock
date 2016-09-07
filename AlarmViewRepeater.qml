@@ -54,7 +54,7 @@ Repeater {
 
         Text {
             id: timeField
-            text: twoDigits(alarm.hour) + ":" + twoDigits(alarm.minute);
+            text: twoDigits(alarm.hour) + " : " + twoDigits(alarm.minute);
             font.pixelSize: 35
             color: "white"
             anchors {
@@ -67,19 +67,20 @@ Repeater {
         Text {
             id: daysField
             text: parseAlarmTitle(alarm.title);
-            styleColor: "lightgrey"
             color: "white"
             font.pixelSize: 16
+            font.weight: Font.Thin
             anchors {
                 top: parent.verticalCenter
-                horizontalCenter: parent.horizontalCenter
+                left: parent.left
+                leftMargin: 30
             }
         }
 
         Switch {
             id: enableSwitch
             width: 80
-            Component.onCompleted: enableSwitch.checked = alarm.enabled
+            checked: alarm.enabled
             onCheckedChanged: {
                 alarm.enabled = enableSwitch.checked
                 alarm.save()

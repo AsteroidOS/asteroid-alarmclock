@@ -43,7 +43,7 @@ Rectangle {
         id: alarmDisable
         iconColor: "white"
         pressedIconColor: "lightgrey"
-        iconName: "sunny"
+        iconName: "ios-sunny"
 
         anchors {
             verticalCenter: parent.verticalCenter
@@ -71,7 +71,7 @@ Rectangle {
         id: alarmSnooze
         iconColor: "white"
         pressedIconColor: "lightgrey"
-        iconName: "moon"
+        iconName: "ios-moon"
 
         anchors {
             verticalCenter: parent.verticalCenter
