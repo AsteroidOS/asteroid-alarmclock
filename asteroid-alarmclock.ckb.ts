@@ -19,7 +19,7 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="32"/>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>جارێک</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"/>
@@ -29,12 +29,12 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>کۆتایی هەفتە</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation>هەموو ڕۆژێک</translation>
     </message>
 </context>
 <context>
