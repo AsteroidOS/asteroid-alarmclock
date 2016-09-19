@@ -6,12 +6,12 @@
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>New Alarm</source>
-        <translation>Nieuw Alarm</translation>
+        <translation>Nieuw alarm</translation>
     </message>
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>Edit Alarm</source>
-        <translation>Wijzig Alarm</translation>
+        <translation>Alarm wijzigen</translation>
     </message>
 </context>
 <context>
@@ -24,12 +24,12 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"/>
         <source>Weekdays</source>
-        <translation>Doordeweeks</translation>
+        <translation>Weekdagen</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation>'s Weekends</translation>
+        <translation>Weekends</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"/>
