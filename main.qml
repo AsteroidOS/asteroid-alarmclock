@@ -23,59 +23,60 @@ import org.asteroid.controls 1.0
 
 Application {
     id: app
-    Rectangle {
-        anchors.fill: parent
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#f69a3e" }
-            GradientStop { position: 1.0; color: "#d63800" }
-        }
-    }
 
     Component  { id: timePickerLayer;  AlarmTimePickerDialog { } }
     Component  { id: alarmDialogLayer; AlarmDialog           { } }
-    LayerStack { id: layerStack }
-
-    AlarmsModel  { id: alarmModel }
-    AlarmHandler {
-        onError: console.log("asteroid-alarmclock: error in AlarmHandler: " + message);
-        onAlarmReady: if(alarmModel.populated) layerStack.push(alarmDialogLayer, {"alarmObject": alarm})
+    LayerStack {
+        id: layerStack
+        firstPage: firstPageComponent
     }
 
-    Flickable {
-        contentHeight: col.height
-        contentWidth: width
-        boundsBehavior: Flickable.DragOverBounds
-        flickableDirection: Flickable.VerticalFlick
-        anchors.fill: parent
-        interactive: alarmModel.populated && alarmList.count !== 0
-        Column {
-            id: col
-            width: parent.width
-            AlarmViewRepeater {
-                id: alarmList
-                model: alarmModel
-                onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
+    Component {
+        id: firstPageComponent
+        Item {
+            AlarmsModel  { id: alarmModel }
+            AlarmHandler {
+                onError: console.log("asteroid-alarmclock: error in AlarmHandler: " + message);
+                onAlarmReady: if(alarmModel.populated) layerStack.push(alarmDialogLayer, {"alarmObject": alarm})
             }
 
-            Item { width: parent.width; height: Units.dp(8) }
+            Flickable {
+                contentHeight: col.height
+                contentWidth: width
+                boundsBehavior: Flickable.DragOverBounds
+                flickableDirection: Flickable.VerticalFlick
+                anchors.fill: parent
+                interactive: alarmModel.populated && alarmList.count !== 0
+                Column {
+                    id: col
+                    width: parent.width
+                    AlarmViewRepeater {
+                        id: alarmList
+                        model: alarmModel
+                        onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
+                    }
 
-            IconButton {
-                id: newAlarmBtn
-                iconColor: "white"
-                pressedIconColor: "lightgrey"
-                iconName:  "ios-add-circle-outline"
-                visible: alarmModel.populated
-                anchors.horizontalCenter: parent.horizontalCenter
-                onClicked: layerStack.push(timePickerLayer)
+                    Item { width: parent.width; height: Units.dp(8) }
+
+                    IconButton {
+                        id: newAlarmBtn
+                        iconColor: "white"
+                        pressedIconColor: "lightgrey"
+                        iconName:  "ios-add-circle-outline"
+                        visible: alarmModel.populated
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        onClicked: layerStack.push(timePickerLayer)
+                    }
+                }
+            }
+
+            Text {
+                text: qsTr("No alarms")
+                color: "white"
+                font.pixelSize: Units.dp(14)
+                visible: alarmModel.populated && alarmList.count === 0
+                anchors.centerIn: parent
             }
         }
-    }
-
-    Text {
-        text: qsTr("No alarms")
-        color: "white"
-        font.pixelSize: Units.dp(14)
-        visible: alarmModel.populated && alarmList.count === 0
-        anchors.centerIn: parent
     }
 }

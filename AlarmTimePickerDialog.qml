@@ -21,18 +21,10 @@ import QtQuick 2.0
 import org.nemomobile.time 1.0
 import org.asteroid.controls 1.0
 
-Rectangle {
+Item {
     id: root
     property var alarmObject
     property var pop
-
-    Rectangle {
-        anchors.fill: parent
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#f69a3e" }
-            GradientStop { position: 1.0; color: "#d63800" }
-        }
-    }
 
     Text {
         id: title
