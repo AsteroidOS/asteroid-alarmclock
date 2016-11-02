@@ -143,9 +143,9 @@ Item {
     IconButton {
         height: parent.height*0.2
         width: height
-        anchors.left: typeof alarmObject !== 'undefined' ? parent.horizontalCenter : null
+        anchors.left: typeof alarmObject !== 'undefined' ? parent.horizontalCenter : undefined
         anchors.leftMargin: 5
-        anchors.horizontalCenter: typeof alarmObject !== 'undefined' ? null : parent.horizontalCenter
+        anchors.horizontalCenter: typeof alarmObject !== 'undefined' ? undefined : parent.horizontalCenter
         anchors.bottom: parent.bottom
 
         iconName: typeof alarmObject !== 'undefined' ? "ios-checkmark-circle-outline" : "ios-add-circle-outline"
