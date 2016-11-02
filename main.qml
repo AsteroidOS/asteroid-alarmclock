@@ -31,15 +31,15 @@ Application {
         firstPage: firstPageComponent
     }
 
+    AlarmsModel  { id: alarmModel }
+    AlarmHandler {
+        onError: console.log("asteroid-alarmclock: error in AlarmHandler: " + message);
+        onAlarmReady: if(alarmModel.populated) layerStack.push(alarmDialogLayer, {"alarmObject": alarm})
+    }
+
     Component {
         id: firstPageComponent
         Item {
-            AlarmsModel  { id: alarmModel }
-            AlarmHandler {
-                onError: console.log("asteroid-alarmclock: error in AlarmHandler: " + message);
-                onAlarmReady: if(alarmModel.populated) layerStack.push(alarmDialogLayer, {"alarmObject": alarm})
-            }
-
             Flickable {
                 contentHeight: col.height
                 contentWidth: width
