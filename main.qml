@@ -50,6 +50,9 @@ Application {
                 Column {
                     id: col
                     width: parent.width
+
+                    Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? app.height/6 : 0 }
+
                     AlarmViewRepeater {
                         id: alarmList
                         model: alarmModel
