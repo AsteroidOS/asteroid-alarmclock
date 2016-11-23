@@ -85,7 +85,22 @@ Rectangle {
     ThemeEffect {
          id: haptics
          effect: "PressStrong"
-     }
+    }
+
+    Timer {
+        property int repetition: 0
+        id: vibration
+        interval: 3000
+        repeat: true
+        running: true
+        triggeredOnStart: true
+        onTriggered: {
+            if(repetition < 10) {
+                repetition=repetition+1
+                haptics.play()
+            } else stop()
+        }
+    }
 
     property DBusInterface _dbus: DBusInterface {
         id: dbus
@@ -98,7 +113,6 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        haptics.play()
         dbus.call("req_display_state_on", undefined)
         window.raise()
     }
