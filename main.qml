@@ -62,17 +62,7 @@ Application {
                         onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
                     }
 
-                    Item { width: parent.width; height: Units.dp(8) }
-
-                    IconButton {
-                        id: newAlarmBtn
-                        iconColor: "white"
-                        pressedIconColor: "lightgrey"
-                        iconName:  "ios-add-circle-outline"
-                        visible: alarmModel.populated
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        onClicked: layerStack.push(timePickerLayer)
-                    }
+                    Item { width: parent.width; height: app.height/4 }
                 }
             }
 
@@ -82,6 +72,18 @@ Application {
                 font.pixelSize: Units.dp(14)
                 visible: alarmModel.populated && alarmList.count === 0
                 anchors.centerIn: parent
+            }
+
+            IconButton {
+                id: newAlarmBtn
+                iconColor: "white"
+                pressedIconColor: "lightgrey"
+                iconName:  "ios-add-circle-outline"
+                visible: alarmModel.populated
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: app.height/12
+                onClicked: layerStack.push(timePickerLayer)
             }
         }
     }
