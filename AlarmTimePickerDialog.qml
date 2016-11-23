@@ -95,7 +95,7 @@ Item {
         Rectangle {
             width: 1
             height: parent.height*0.8
-            color: "lightgrey"
+            color: "white"
             anchors.verticalCenter: parent.verticalCenter
         }
 

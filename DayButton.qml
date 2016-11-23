@@ -25,15 +25,15 @@ Item {
     Rectangle {
         anchors.margins: 2
         anchors.fill: parent
-        color: checked ? "#d63800" : "transparent"
+        color: checked ? "#d4962c" : "#deb570"
         border.width: 1
-        border.color: "lightgrey"
+        border.color: checked ? "#FFFFFF" : "#DDDDDD"
         radius: width/2
     }
 
     Text {
         text: Qt.locale().dayName(day, Locale.ShortFormat)
-        color: "white"
+        color: checked ? "#FFFFFF" : "#DDDDDD"
         anchors.fill: parent
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
