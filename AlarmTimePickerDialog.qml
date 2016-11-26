@@ -127,7 +127,7 @@ Item {
     IconButton {
         height: parent.height*0.2
         width: height
-        iconName: "ios-close-circle-outline"
+        iconName: "ios-trash-circle"
         iconColor: "white"
         pressedIconColor: "lightgrey"
         visible: typeof alarmObject !== 'undefined'
