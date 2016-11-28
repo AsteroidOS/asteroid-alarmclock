@@ -69,7 +69,6 @@ Repeater {
             text: parseAlarmTitle(alarm.title);
             color: "white"
             font.pixelSize: 16
-            font.weight: Font.Thin
             anchors {
                 top: parent.verticalCenter
                 left: parent.left
