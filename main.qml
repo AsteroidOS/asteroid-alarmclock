@@ -24,8 +24,8 @@ import org.asteroid.controls 1.0
 Application {
     id: app
 
-    centerColor: "#f9dd06"
-    outerColor: "#d38c11"
+    centerColor: "#dfb103"
+    outerColor: "#be4e0e"
 
     Component  { id: timePickerLayer;  AlarmTimePickerDialog { } }
     Component  { id: alarmDialogLayer; AlarmDialog           { } }

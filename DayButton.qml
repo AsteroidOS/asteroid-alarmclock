@@ -25,7 +25,7 @@ Item {
     Rectangle {
         anchors.margins: 2
         anchors.fill: parent
-        color: checked ? "#d4962c" : "#deb570"
+        color: checked ? "#d4962c" : "#8c6e39"
         border.width: 1
         border.color: checked ? "#FFFFFF" : "#DDDDDD"
         radius: width/2

@@ -10,5 +10,5 @@ name[ru_RU]=будильник
 Categories=Applications;
 Exec=invoker --single-instance --type=qtcomponents-qt5 /usr/bin/asteroid-alarmclock
 Icon=ios-alarm-outline
-X-Asteroid-Center-Color=#f9dd06
-X-Asteroid-Outer-Color=#d38c11
+X-Asteroid-Center-Color=#dfb103
+X-Asteroid-Outer-Color=#be4e0e
