@@ -79,7 +79,7 @@ Repeater {
         Switch {
             id: enableSwitch
             width: 80
-            checked: alarm.enabled
+            Component.onCompleted: checked = alarm.enabled
             onCheckedChanged: {
                 alarm.enabled = enableSwitch.checked
                 alarm.save()
