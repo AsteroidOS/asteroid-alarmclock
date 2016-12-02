@@ -53,8 +53,14 @@ Application {
                 Column {
                     id: col
                     width: parent.width
-
-                    Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? app.height/6 : 0 }
+                    Text {
+                        id: title
+                        color: "white"
+                        text: qsTr("Alarms")
+                        verticalAlignment: Text.AlignVCenter
+                        horizontalAlignment: Text.AlignHCenter
+                        width: parent.width; height: app.height/6
+                    }
 
                     AlarmViewRepeater {
                         id: alarmList
@@ -62,7 +68,7 @@ Application {
                         onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
                     }
 
-                    Item { width: parent.width; height: app.height/4 }
+                    Item { width: parent.width; height: app.height/5 }
                 }
             }
 
@@ -82,7 +88,7 @@ Application {
                 visible: alarmModel.populated
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: app.height/12
+                anchors.bottomMargin: app.height/28
                 onClicked: layerStack.push(timePickerLayer)
             }
         }

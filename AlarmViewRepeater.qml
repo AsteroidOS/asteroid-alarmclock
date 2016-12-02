@@ -48,47 +48,47 @@ Repeater {
 
     MouseArea {
         id: editByClick
-        height: 82
+        height: 60
         width: app.width
         onClicked: editClicked(alarm);
 
         Text {
             id: timeField
             text: twoDigits(alarm.hour) + " : " + twoDigits(alarm.minute);
-            font.pixelSize: 35
-            color: "white"
+            font.pixelSize: parent.height*0.45
+            color: enableSwitch.checked ? "white" : "lightgrey"
             anchors {
                 bottom: parent.verticalCenter
                 left: parent.left
-                leftMargin: 30
+                leftMargin: parent.height/2
             }
         }
 
         Text {
             id: daysField
             text: parseAlarmTitle(alarm.title);
-            color: "white"
-            font.pixelSize: 16
+            color: enableSwitch.checked ? "white" : "lightgrey"
+            font.pixelSize: parent.height*0.25
             anchors {
                 top: parent.verticalCenter
                 left: parent.left
-                leftMargin: 30
+                leftMargin: parent.height/2
             }
         }
 
         Switch {
             id: enableSwitch
-            width: 80
+            width: parent.width*0.22
             Component.onCompleted: checked = alarm.enabled
             onCheckedChanged: {
                 alarm.enabled = enableSwitch.checked
                 alarm.save()
             }
             anchors {
-                right: parent.right
-                rightMargin: 30
+                topMargin: parent.height*0.1
                 top: parent.top
-                bottom: daysField.top
+                right: parent.right
+                rightMargin: parent.height/2
             }
         }
     }
