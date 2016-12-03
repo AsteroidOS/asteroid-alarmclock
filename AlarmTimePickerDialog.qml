@@ -26,6 +26,11 @@ Item {
     property var alarmObject
     property var pop
 
+    function zeroPadding(x) {
+        if (x<10) return "0"+x;
+        else      return x;
+    }
+
     Text {
         id: title
         color: "white"
@@ -110,7 +115,7 @@ Item {
                 width: minuteLV.width
                 height: 30
                 Text {
-                    text: index
+                    text: zeroPadding(index)
                     anchors.centerIn: parent
                     color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
                     scale: parent.ListView.isCurrentItem ? 1.5 : 1
