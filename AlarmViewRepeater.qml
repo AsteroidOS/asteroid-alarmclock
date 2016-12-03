@@ -91,5 +91,17 @@ Repeater {
                 rightMargin: parent.height/2
             }
         }
+
+        MouseArea {
+            id: largerSwitchArea
+            width: app.width*0.4
+            onClicked: enableSwitch.checked = !enableSwitch.checked
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+                right: parent.right
+            }
+        }
+
     }
 }
