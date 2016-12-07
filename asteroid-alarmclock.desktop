@@ -6,6 +6,7 @@ Name[es_ES]=Reloj Despertador
 Name[fr_FR]=Réveil
 Name[nl_NL]=Wekker
 Name[pl_PL]=Alarm
+Name[sv_SV]=Alarm
 name[ru_RU]=будильник
 Categories=Applications;
 Exec=invoker --single-instance --type=qtcomponents-qt5 /usr/bin/asteroid-alarmclock
