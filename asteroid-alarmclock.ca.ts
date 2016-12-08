@@ -6,12 +6,12 @@
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>New Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Nova alarma</translation>
     </message>
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>Edit Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar l'alarma</translation>
     </message>
 </context>
 <context>
@@ -19,17 +19,17 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="32"/>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Una vegada</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"/>
         <source>Weekdays</source>
-        <translation type="unfinished"></translation>
+        <translation>Dies entre setmana</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>Dies de cap de setmana</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"/>
