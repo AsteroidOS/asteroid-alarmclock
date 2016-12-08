@@ -6,12 +6,12 @@
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>New Alarm</source>
-        <translation>Új Ébresztőóra</translation>
+        <translation>Új Ébresztő</translation>
     </message>
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>Edit Alarm</source>
-        <translation>Ébresztőóra módosítása</translation>
+        <translation>Ébresztő módosítása</translation>
     </message>
 </context>
 <context>
