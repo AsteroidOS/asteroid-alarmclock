@@ -34,7 +34,7 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
-        <translation type="unfinished">Diariamente</translation>
+        <translation>Diariamente</translation>
     </message>
 </context>
 <context>
