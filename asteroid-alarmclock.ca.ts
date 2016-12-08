@@ -34,7 +34,7 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation>Cada dia</translation>
     </message>
 </context>
 <context>
@@ -42,7 +42,7 @@
     <message>
         <location filename="main.qml" line="67"/>
         <source>No alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>Sense alarmes</translation>
     </message>
 </context>
 </TS>
