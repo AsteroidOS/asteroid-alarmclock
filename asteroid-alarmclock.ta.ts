@@ -6,7 +6,7 @@
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>New Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>புதிய அலாரம்</translation>
     </message>
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
@@ -19,22 +19,22 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="32"/>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>ஒருமுறை</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"/>
         <source>Weekdays</source>
-        <translation type="unfinished"></translation>
+        <translation>வார நாட்களில்</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>வார இறுதியில்</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation>தினமும்</translation>
     </message>
 </context>
 <context>
