@@ -6,12 +6,12 @@
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>New Alarm</source>
-        <translation>Neuer Wecker</translation>
+        <translation>Alarm neu</translation>
     </message>
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>Edit Alarm</source>
-        <translation>Wecker bearbeiten</translation>
+        <translation>Alarm bearbeiten</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation>An Wochenenden</translation>
+        <translation>Am Wochenende</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="main.qml" line="67"/>
         <source>No alarms</source>
-        <translation>Keine Wecker</translation>
+        <translation>Kein Alarm vorhanden</translation>
     </message>
 </context>
 </TS>
