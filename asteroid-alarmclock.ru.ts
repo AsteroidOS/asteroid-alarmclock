@@ -42,7 +42,7 @@
     <message>
         <location filename="main.qml" line="67"/>
         <source>No alarms</source>
-        <translation>Без сигнала</translation>
+        <translation>Нет будильников</translation>
     </message>
 </context>
 </TS>
