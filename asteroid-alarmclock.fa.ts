@@ -6,12 +6,12 @@
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>New Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>هشدار جدید</translation>
     </message>
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>Edit Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>ویرایش هشدار</translation>
     </message>
 </context>
 <context>
@@ -19,22 +19,22 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="32"/>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>یک بار</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"/>
         <source>Weekdays</source>
-        <translation type="unfinished"></translation>
+        <translation>روزهای کاری</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>آخرهفته‌ها</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation>هرروز</translation>
     </message>
 </context>
 <context>
@@ -42,7 +42,7 @@
     <message>
         <location filename="main.qml" line="67"/>
         <source>No alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>بدون هشدار</translation>
     </message>
 </context>
 </TS>
