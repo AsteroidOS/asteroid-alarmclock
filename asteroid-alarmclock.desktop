@@ -9,7 +9,8 @@ Name[nl_NL]=Wekker
 Name[pl]=Alarm
 Name[pt_BR]=Alarme
 Name[sv]=Alarm
-name[ru]=будильник
+Name[ru]=будильник
+Name[fa]=زنگ ساعت
 Categories=Applications;
 Exec=invoker --single-instance --type=qtcomponents-qt5 /usr/bin/asteroid-alarmclock
 Icon=ios-alarm-outline
