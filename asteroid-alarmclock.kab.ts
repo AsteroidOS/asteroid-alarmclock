@@ -6,12 +6,12 @@
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>New Alarm</source>
-        <translation>Tangedwit tamaynut</translation>
+        <translation>Tangdwit tamaynut</translation>
     </message>
     <message>
         <location filename="AlarmTimePickerDialog.qml" line="31"/>
         <source>Edit Alarm</source>
-        <translation>Ẓreg Tangedwit</translation>
+        <translation>Ẓreg Tangdwit</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="AlarmViewRepeater.qml" line="32"/>
         <source>Once</source>
-        <translation>Tikelt kan</translation>
+        <translation>yiwet n tikkelt</translation>
     </message>
     <message>
         <location filename="AlarmViewRepeater.qml" line="33"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="main.qml" line="67"/>
         <source>No alarms</source>
-        <translation>Ulac Tangedwit</translation>
+        <translation>Ulac Tangdwit</translation>
     </message>
 </context>
 </TS>
