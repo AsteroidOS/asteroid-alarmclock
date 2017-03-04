@@ -49,7 +49,8 @@ target.path = /usr/bin/
 
 desktop.commands = bash $$PWD/i18n/generate-desktop.sh $$PWD asteroid-alarmclock.desktop
 desktop.path = /usr/share/applications
-desktop.files = asteroid-alarmclock.desktop
+desktop.files = $$OUT_PWD/asteroid-alarmclock.desktop
+desktop.CONFIG = no_check_exist
 
 systemd.path = /usr/lib/systemd/user/
 systemd.files = open-alarm.service
