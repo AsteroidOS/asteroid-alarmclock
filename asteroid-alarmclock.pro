@@ -42,6 +42,7 @@ TRANSLATIONS = i18n/asteroid-alarmclock.ca.ts \
                i18n/asteroid-alarmclock.ta.ts \
                i18n/asteroid-alarmclock.tr.ts \
                i18n/asteroid-alarmclock.uk.ts \
+               i18n/asteroid-alarmclock.zh_CN.ts \
                i18n/asteroid-alarmclock.zh_Hans.ts
 
 TARGET = asteroid-alarmclock

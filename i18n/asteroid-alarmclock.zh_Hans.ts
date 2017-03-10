@@ -6,12 +6,12 @@
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>New Alarm</source>
-        <translation>新建闹钟</translation>
+        <translation>新建闹铃</translation>
     </message>
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>Edit Alarm</source>
-        <translation>编辑闹钟</translation>
+        <translation>编辑闹铃</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../AlarmViewRepeater.qml" line="32"/>
         <source>Once</source>
-        <translation>一次</translation>
+        <translation>仅一次</translation>
     </message>
     <message>
         <location filename="../AlarmViewRepeater.qml" line="33"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="asteroid-alarmclock.desktop.h" line="5"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>闹钟</translation>
     </message>
 </context>
 <context>
@@ -50,12 +50,12 @@
     <message>
         <location filename="../main.qml" line="59"/>
         <source>Alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>闹铃</translation>
     </message>
     <message>
         <location filename="../main.qml" line="76"/>
         <source>No alarms</source>
-        <translation>无闹钟</translation>
+        <translation>无闹铃</translation>
     </message>
 </context>
 </TS>
