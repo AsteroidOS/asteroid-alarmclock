@@ -130,8 +130,6 @@ Item {
     }
 
     IconButton {
-        height: parent.height*0.2
-        width: height
         iconName: "ios-trash-circle"
         iconColor: "white"
         pressedIconColor: "lightgrey"
@@ -139,6 +137,7 @@ Item {
         anchors.right: parent.horizontalCenter
         anchors.rightMargin: 5
         anchors.bottom: parent.bottom
+        anchors.bottomMargin: app.height/28
         onClicked: {
             alarmObject.deleteAlarm()
             root.pop()
@@ -146,12 +145,11 @@ Item {
     }
 
     IconButton {
-        height: parent.height*0.2
-        width: height
         anchors.left: typeof alarmObject !== 'undefined' ? parent.horizontalCenter : undefined
         anchors.leftMargin: 5
         anchors.horizontalCenter: typeof alarmObject !== 'undefined' ? undefined : parent.horizontalCenter
         anchors.bottom: parent.bottom
+        anchors.bottomMargin: app.height/28
 
         iconName: typeof alarmObject !== 'undefined' ? "ios-checkmark-circle-outline" : "ios-add-circle-outline"
         iconColor: "white"
