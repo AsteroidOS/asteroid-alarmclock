@@ -11,7 +11,7 @@
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>Edit Alarm</source>
-        <translation>Confgiura Sveglia</translation>
+        <translation>Modifica Sveglia</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
-        <translation>Ogni Giorno</translation>
+        <translation>Ogni giorno</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../main.qml" line="76"/>
         <source>No alarms</source>
-        <translation>Nessuna Sveglia</translation>
+        <translation>Nessuna sveglia</translation>
     </message>
 </context>
 </TS>
