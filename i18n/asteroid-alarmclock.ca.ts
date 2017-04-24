@@ -11,7 +11,7 @@
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>Edit Alarm</source>
-        <translation>Editar l&apos;alarma</translation>
+        <translation>Editar l'alarma</translation>
     </message>
 </context>
 <context>
@@ -42,7 +42,7 @@
     <message>
         <location filename="asteroid-alarmclock.desktop.h" line="5"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alarma</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../main.qml" line="59"/>
         <source>Alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>Alarmes</translation>
     </message>
     <message>
         <location filename="../main.qml" line="76"/>
