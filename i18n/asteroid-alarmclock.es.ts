@@ -29,7 +29,7 @@
     <message>
         <location filename="../AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation>Fines de semana</translation>
+        <translation>Fin de semana</translation>
     </message>
     <message>
         <location filename="../AlarmViewRepeater.qml" line="35"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="asteroid-alarmclock.desktop.h" line="5"/>
         <source>Alarm Clock</source>
-        <translation>Reloj Despertador</translation>
+        <translation>Despertador</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../main.qml" line="76"/>
         <source>No alarms</source>
-        <translation>No hay alarmas</translation>
+        <translation>Sin alarmas</translation>
     </message>
 </context>
 </TS>
