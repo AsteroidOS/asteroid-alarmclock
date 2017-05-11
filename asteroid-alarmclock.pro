@@ -24,7 +24,7 @@ lupdate_only{
 TRANSLATIONS = i18n/asteroid-alarmclock.ca.ts \
                i18n/asteroid-alarmclock.ckb.ts \
                i18n/asteroid-alarmclock.cs.ts \
-               i18n/asteroid-alarmclock.de.ts \
+               i18n/asteroid-alarmclock.de_DE.ts \
                i18n/asteroid-alarmclock.el.ts \
                i18n/asteroid-alarmclock.es.ts \
                i18n/asteroid-alarmclock.fa.ts \
@@ -33,7 +33,7 @@ TRANSLATIONS = i18n/asteroid-alarmclock.ca.ts \
                i18n/asteroid-alarmclock.it.ts \
                i18n/asteroid-alarmclock.kab.ts \
                i18n/asteroid-alarmclock.ko.ts \
-               i18n/asteroid-alarmclock.nl.ts \
+               i18n/asteroid-alarmclock.nl_NL.ts \
                i18n/asteroid-alarmclock.pl.ts \
                i18n/asteroid-alarmclock.pt_BR.ts \
                i18n/asteroid-alarmclock.ru.ts \
