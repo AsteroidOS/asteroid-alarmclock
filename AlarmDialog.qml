@@ -17,12 +17,13 @@
  */
 
 import QtQuick 2.0
-import QtFeedback 5.0
 import org.asteroid.controls 1.0
+import org.nemomobile.ngf 1.0
 import org.nemomobile.dbus 1.0
 
 Rectangle {
     id: alarmDialogRoot
+    property var pop
     property var alarmObject
     color: "black"
 
@@ -63,7 +64,10 @@ Rectangle {
                     }
                 }
             }
-            alarmObject.dismiss();
+            feedback.stop()
+            alarmObject.dismiss()
+            alarmTimeField.text = ""
+            alarmDialogRoot.pop()
         }
     }
 
@@ -79,27 +83,17 @@ Rectangle {
             right: parent.right
         }
 
-        onClicked: alarmObject.snooze();
-    }
-
-    ThemeEffect {
-         id: haptics
-         effect: "PressStrong"
-    }
-
-    Timer {
-        property int repetition: 0
-        id: vibration
-        interval: 3000
-        repeat: true
-        running: true
-        triggeredOnStart: true
-        onTriggered: {
-            if(repetition < 10) {
-                repetition=repetition+1
-                haptics.play()
-            } else stop()
+        onClicked: {
+            feedback.stop()
+            alarmObject.snooze()
+            alarmTimeField.text = ""
+            alarmDialogRoot.pop()
         }
+    }
+
+    NonGraphicalFeedback {
+        id: feedback
+        event: "clock"
     }
 
     property DBusInterface _dbus: DBusInterface {
@@ -115,5 +109,6 @@ Rectangle {
     Component.onCompleted: {
         dbus.call("req_display_state_on", undefined)
         window.raise()
+        feedback.play()
     }
 }
