@@ -59,7 +59,7 @@ Application {
                         text: qsTr("Alarms")
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
-                        width: parent.width; height: app.height/6
+                        width: parent.width; height: app.height/5
                     }
 
                     AlarmViewRepeater {
