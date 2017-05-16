@@ -174,6 +174,8 @@ Item {
             alarm.daysOfWeek = daysString;
             alarm.enabled = true;
 
+            alarm.save()
+
             root.pop();
         }
     }

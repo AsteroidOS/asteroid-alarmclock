@@ -81,8 +81,10 @@ Repeater {
             width: parent.width*0.22
             Component.onCompleted: checked = alarm.enabled
             onCheckedChanged: {
-                alarm.enabled = enableSwitch.checked
-                alarm.save()
+                if(alarm.enabled != checked) {
+                    alarm.enabled = enableSwitch.checked
+                    alarm.save()
+                }
             }
             anchors {
                 topMargin: parent.height*0.1
@@ -102,6 +104,5 @@ Repeater {
                 right: parent.right
             }
         }
-
     }
 }
