@@ -1,4 +1,4 @@
 [D-BUS Service]
 Name=com.nokia.voland
 Exec=
-SystemdService=open-alarm.service
+SystemdService=alarmpresenter.service

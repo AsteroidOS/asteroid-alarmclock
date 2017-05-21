@@ -3,7 +3,6 @@
         <file>main.qml</file>
         <file>DayButton.qml</file>
         <file>AlarmTimePickerDialog.qml</file>
-        <file>AlarmDialog.qml</file>
         <file>AlarmViewRepeater.qml</file>
     </qresource>
 </RCC>
