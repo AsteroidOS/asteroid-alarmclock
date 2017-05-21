@@ -11,7 +11,7 @@ TARGET = asteroid-alarmpresenter
 target.path = /usr/bin/
 
 systemd.path = /usr/lib/systemd/user/
-systemd.files = open-alarm.service
+systemd.files = alarmpresenter.service
 
 dbus.path = /usr/share/dbus-1/services
 dbus.files = com.nokia.voland.service
