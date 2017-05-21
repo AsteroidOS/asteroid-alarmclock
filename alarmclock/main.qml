@@ -28,17 +28,12 @@ Application {
     outerColor: "#be4e0e"
 
     Component  { id: timePickerLayer;  AlarmTimePickerDialog { } }
-    Component  { id: alarmDialogLayer; AlarmDialog           { } }
     LayerStack {
         id: layerStack
         firstPage: firstPageComponent
     }
 
     AlarmsModel  { id: alarmModel }
-    AlarmHandler {
-        onError: console.log("asteroid-alarmclock: error in AlarmHandler: " + message);
-        onAlarmReady: if(alarmModel.populated) layerStack.push(alarmDialogLayer, {"alarmObject": alarm})
-    }
 
     Component {
         id: firstPageComponent
