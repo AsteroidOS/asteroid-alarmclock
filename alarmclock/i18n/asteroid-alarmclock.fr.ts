@@ -11,7 +11,7 @@
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>Edit Alarm</source>
-        <translation>Éditer l&apos;alarme</translation>
+        <translation>Éditer l'alarme</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation>Weekends</translation>
+        <translation>Fins de semaine</translation>
     </message>
     <message>
         <location filename="../AlarmViewRepeater.qml" line="35"/>
@@ -50,12 +50,12 @@
     <message>
         <location filename="../main.qml" line="59"/>
         <source>Alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>Alarme</translation>
     </message>
     <message>
         <location filename="../main.qml" line="76"/>
         <source>No alarms</source>
-        <translation>Pas d&apos;alarme</translation>
+        <translation>Pas d'alarme</translation>
     </message>
 </context>
 </TS>
