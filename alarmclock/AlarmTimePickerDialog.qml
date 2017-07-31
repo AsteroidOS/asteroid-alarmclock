@@ -137,7 +137,7 @@ Item {
         anchors.right: parent.horizontalCenter
         anchors.rightMargin: Dims.w(2)
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: Dims.h(3)
+        anchors.bottomMargin: Dims.iconButtonMargin
         onClicked: {
             alarmObject.deleteAlarm()
             root.pop()
@@ -149,7 +149,7 @@ Item {
         anchors.leftMargin: Dims.w(2)
         anchors.horizontalCenter: typeof alarmObject !== 'undefined' ? undefined : parent.horizontalCenter
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: Dims.h(3)
+        anchors.bottomMargin: Dims.iconButtonMargin
 
         iconName: typeof alarmObject !== 'undefined' ? "ios-checkmark-circle-outline" : "ios-add-circle-outline"
         iconColor: "white"

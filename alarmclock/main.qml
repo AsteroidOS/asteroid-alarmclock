@@ -83,7 +83,7 @@ Application {
                 visible: alarmModel.populated
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: Dims.h(3)
+                anchors.bottomMargin: Dims.iconButtonMargin
                 onClicked: layerStack.push(timePickerLayer)
             }
         }

@@ -63,7 +63,7 @@ Application {
 
         anchors {
             verticalCenter: parent.verticalCenter
-            leftMargin: Dims.l(5)
+            leftMargin: Dims.iconButtonMargin
             left: parent.left
         }
 
@@ -93,7 +93,7 @@ Application {
 
         anchors {
             verticalCenter: parent.verticalCenter
-            rightMargin: Dims.l(5)
+            rightMargin: Dims.iconButtonMargin
             right: parent.right
         }
 
