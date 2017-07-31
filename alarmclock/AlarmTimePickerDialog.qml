@@ -35,7 +35,7 @@ Item {
         id: title
         color: "white"
         text: typeof alarmObject === 'undefined' ? qsTr("New Alarm").toUpperCase() : qsTr("Edit Alarm").toUpperCase()
-        height: parent.height*0.15
+        height: Dims.h(15)
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
@@ -47,22 +47,22 @@ Item {
         id: firstDaysRow
         anchors.top: title.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        height: parent.height*0.16
-        width: height*3
-        DayButton { id: buttonDayMon; day: 1; checked: false; width: parent.width/3; height: firstDaysRow.height }
-        DayButton { id: buttonDayTue; day: 2; checked: false; width: parent.width/3; height: firstDaysRow.height }
-        DayButton { id: buttonDayWed; day: 3; checked: false; width: parent.width/3; height: firstDaysRow.height }
+        height: Dims.h(16)
+        width: Dims.w(48)
+        DayButton { id: buttonDayMon; day: 1; checked: false; width: firstDaysRow.height; height: firstDaysRow.height }
+        DayButton { id: buttonDayTue; day: 2; checked: false; width: firstDaysRow.height; height: firstDaysRow.height }
+        DayButton { id: buttonDayWed; day: 3; checked: false; width: firstDaysRow.height; height: firstDaysRow.height }
     }
     Row {
         id: secondDaysRow
         anchors.top: firstDaysRow.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        height: parent.height*0.16
-        width: height*4
-        DayButton { id: buttonDayThu; day: 4; checked: false; width: parent.width/4; height: secondDaysRow.height }
-        DayButton { id: buttonDayFri; day: 5; checked: false; width: parent.width/4; height: secondDaysRow.height }
-        DayButton { id: buttonDaySat; day: 6; checked: false; width: parent.width/4; height: secondDaysRow.height }
-        DayButton { id: buttonDaySun; day: 7; checked: false; width: parent.width/4; height: secondDaysRow.height }
+        height: Dims.h(16)
+        width: Dims.w(64)
+        DayButton { id: buttonDayThu; day: 4; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
+        DayButton { id: buttonDayFri; day: 5; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
+        DayButton { id: buttonDaySat; day: 6; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
+        DayButton { id: buttonDaySun; day: 7; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
     }
 
     Row {
@@ -70,19 +70,19 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: secondDaysRow.bottom
-        anchors.topMargin: parent.height*0.05
-        height: parent.height*0.28
+        anchors.topMargin: Dims.h(5)
+        height: Dims.h(28)
 
         ListView {
             id: hourLV
             height: parent.height
-            width: parent.width/2-1
+            width: Dims.w(50)
             clip: true
-            spacing: 6
+            spacing: Dims.h(2)
             model: 24
             delegate: Item {
                 width: hourLV.width
-                height: 30
+                height: Dims.h(10)
                 Text {
                     text: index
                     anchors.centerIn: parent
@@ -107,13 +107,13 @@ Item {
         ListView {
             id: minuteLV
             height: parent.height
-            width: parent.width/2-1
+            width: Dims.w(50)
             clip: true
-            spacing: 6
+            spacing: Dims.h(2)
             model: 60
             delegate: Item {
                 width: minuteLV.width
-                height: 30
+                height: Dims.h(10)
                 Text {
                     text: zeroPadding(index)
                     anchors.centerIn: parent
@@ -135,9 +135,9 @@ Item {
         pressedIconColor: "lightgrey"
         visible: typeof alarmObject !== 'undefined'
         anchors.right: parent.horizontalCenter
-        anchors.rightMargin: 5
+        anchors.rightMargin: Dims.w(2)
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: app.height/28
+        anchors.bottomMargin: Dims.h(3)
         onClicked: {
             alarmObject.deleteAlarm()
             root.pop()
@@ -146,10 +146,10 @@ Item {
 
     IconButton {
         anchors.left: typeof alarmObject !== 'undefined' ? parent.horizontalCenter : undefined
-        anchors.leftMargin: 5
+        anchors.leftMargin: Dims.w(2)
         anchors.horizontalCenter: typeof alarmObject !== 'undefined' ? undefined : parent.horizontalCenter
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: app.height/28
+        anchors.bottomMargin: Dims.h(3)
 
         iconName: typeof alarmObject !== 'undefined' ? "ios-checkmark-circle-outline" : "ios-add-circle-outline"
         iconColor: "white"

@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.8
 import org.nemomobile.alarms 1.0
 import org.asteroid.controls 1.0
 
@@ -54,7 +54,7 @@ Application {
                         text: qsTr("Alarms")
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
-                        width: parent.width; height: app.height/5
+                        width: parent.width; height: Dims.h(22)
                     }
 
                     AlarmViewRepeater {
@@ -63,14 +63,14 @@ Application {
                         onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
                     }
 
-                    Item { width: parent.width; height: app.height/5 }
+                    Item { width: parent.width; height: Dims.h(20) }
                 }
             }
 
             Text {
                 text: qsTr("No alarms")
                 color: "white"
-                font.pixelSize: Units.dp(14)
+                font.pixelSize: Dims.l(8)
                 visible: alarmModel.populated && alarmList.count === 0
                 anchors.centerIn: parent
             }
@@ -83,7 +83,7 @@ Application {
                 visible: alarmModel.populated
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: app.height/28
+                anchors.bottomMargin: Dims.h(3)
                 onClicked: layerStack.push(timePickerLayer)
             }
         }

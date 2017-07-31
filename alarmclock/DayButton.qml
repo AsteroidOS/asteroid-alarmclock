@@ -17,13 +17,14 @@
  */
 
 import QtQuick 2.0
+import org.asteroid.controls 1.0
 
 Item {
     property int day: 1
     property bool checked: false
 
     Rectangle {
-        anchors.margins: 2
+        anchors.margins: Dims.l(1)
         anchors.fill: parent
         color: checked ? "#d4962c" : "#8c6e39"
         border.width: 1

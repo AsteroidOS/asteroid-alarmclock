@@ -48,14 +48,14 @@ Repeater {
 
     MouseArea {
         id: editByClick
-        height: 60
-        width: app.width
+        height: Dims.h(21)
+        width: Dims.w(100)
         onClicked: editClicked(alarm);
 
         Text {
             id: timeField
             text: twoDigits(alarm.hour) + " : " + twoDigits(alarm.minute);
-            font.pixelSize: parent.height*0.45
+            font.pixelSize: Dims.l(9)
             color: enableSwitch.checked ? "white" : "lightgrey"
             anchors {
                 bottom: parent.verticalCenter
@@ -68,7 +68,7 @@ Repeater {
             id: daysField
             text: parseAlarmTitle(alarm.title);
             color: enableSwitch.checked ? "white" : "lightgrey"
-            font.pixelSize: parent.height*0.25
+            font.pixelSize: Dims.l(5)
             anchors {
                 top: parent.verticalCenter
                 left: parent.left
@@ -78,7 +78,7 @@ Repeater {
 
         Switch {
             id: enableSwitch
-            width: parent.width*0.22
+            width: Dims.w(22)
             Component.onCompleted: checked = alarm.enabled
             onCheckedChanged: {
                 if(alarm.enabled != checked) {
@@ -87,7 +87,7 @@ Repeater {
                 }
             }
             anchors {
-                topMargin: parent.height*0.1
+                topMargin: parent.height/10
                 top: parent.top
                 right: parent.right
                 rightMargin: parent.height/2
@@ -96,7 +96,7 @@ Repeater {
 
         MouseArea {
             id: largerSwitchArea
-            width: app.width*0.4
+            width: Dims.w(40)
             onClicked: enableSwitch.checked = !enableSwitch.checked
             anchors {
                 top: parent.top
