@@ -50,7 +50,7 @@ Application {
     Text {
         id: alarmTimeField
         color: "white"
-        font.pixelSize: 50
+        font.pixelSize: Dims.l(18)
         anchors.centerIn: parent
         text: alarmDialog !== undefined && alarmDialog !== null ? twoDigits(alarmDialog.hour) + ":" + twoDigits(alarmDialog.minute) : ""
     }
@@ -63,7 +63,7 @@ Application {
 
         anchors {
             verticalCenter: parent.verticalCenter
-            leftMargin: Units.dp(8)
+            leftMargin: Dims.l(5)
             left: parent.left
         }
 
@@ -93,7 +93,7 @@ Application {
 
         anchors {
             verticalCenter: parent.verticalCenter
-            rightMargin: Units.dp(8)
+            rightMargin: Dims.l(5)
             right: parent.right
         }
 
