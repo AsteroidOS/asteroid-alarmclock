@@ -92,8 +92,8 @@ Item {
                     Behavior on color { ColorAnimation { } }
                 }
             }
-            preferredHighlightBegin: height / 2 - 15
-            preferredHighlightEnd: height / 2 + 15
+            preferredHighlightBegin: height / 2 - Dims.h(5)
+            preferredHighlightEnd: height / 2 + Dims.h(5)
             highlightRangeMode: ListView.StrictlyEnforceRange
         }
 
@@ -123,8 +123,8 @@ Item {
                     Behavior on color { ColorAnimation { } }
                 }
             }
-            preferredHighlightBegin: height / 2 - 15
-            preferredHighlightEnd: height / 2 + 15
+            preferredHighlightBegin: height / 2 - Dims.h(5)
+            preferredHighlightEnd: height / 2 + Dims.h(5)
             highlightRangeMode: ListView.StrictlyEnforceRange
         }
     }
