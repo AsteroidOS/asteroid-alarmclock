@@ -42,7 +42,7 @@
     <message>
         <location filename="asteroid-alarmclock.desktop.h" line="5"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>Budík</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../main.qml" line="59"/>
         <source>Alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>Alarm</translation>
     </message>
     <message>
         <location filename="../main.qml" line="76"/>
