@@ -6,12 +6,12 @@
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>New Alarm</source>
-        <translation>Nueva Alarma</translation>
+        <translation>Nueva alarma</translation>
     </message>
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>Edit Alarm</source>
-        <translation>Editar Alarma</translation>
+        <translation>Editar alarma</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
-        <translation>Cada dia</translation>
+        <translation>Todos los días</translation>
     </message>
 </context>
 <context>
