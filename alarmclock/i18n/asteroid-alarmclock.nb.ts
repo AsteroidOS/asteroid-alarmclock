@@ -6,12 +6,12 @@
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>New Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny alarm</translation>
     </message>
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>Edit Alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Endre alarm</translation>
     </message>
 </context>
 <context>
@@ -19,22 +19,22 @@
     <message>
         <location filename="../AlarmViewRepeater.qml" line="32"/>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Én gang</translation>
     </message>
     <message>
         <location filename="../AlarmViewRepeater.qml" line="33"/>
         <source>Weekdays</source>
-        <translation type="unfinished"></translation>
+        <translation>Hverdager</translation>
     </message>
     <message>
         <location filename="../AlarmViewRepeater.qml" line="34"/>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>Helger</translation>
     </message>
     <message>
         <location filename="../AlarmViewRepeater.qml" line="35"/>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation>Hver dag</translation>
     </message>
 </context>
 <context>
@@ -42,7 +42,7 @@
     <message>
         <location filename="asteroid-alarmclock.desktop.h" line="5"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alarm</translation>
     </message>
 </context>
 <context>
@@ -50,12 +50,12 @@
     <message>
         <location filename="../main.qml" line="59"/>
         <source>Alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>Alarmer</translation>
     </message>
     <message>
         <location filename="../main.qml" line="76"/>
         <source>No alarms</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen alarmer</translation>
     </message>
 </context>
 </TS>
