@@ -6,12 +6,12 @@
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>New Alarm</source>
-        <translation>Nytt Alarm</translation>
+        <translation>Nytt alarm</translation>
     </message>
     <message>
         <location filename="../AlarmTimePickerDialog.qml" line="37"/>
         <source>Edit Alarm</source>
-        <translation>Ändra Alarm</translation>
+        <translation>Redigera alarm</translation>
     </message>
 </context>
 <context>
