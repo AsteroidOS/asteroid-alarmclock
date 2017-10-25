@@ -6,27 +6,27 @@
     <message>
         <location filename="../AlarmListItem.qml" line="39"/>
         <source>Once</source>
-        <translation type="unfinished">Uma vez</translation>
+        <translation>Uma vez</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="40"/>
         <source>Weekdays</source>
-        <translation type="unfinished">Dias da semana</translation>
+        <translation>Dias da semana</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Weekends</source>
-        <translation type="unfinished">Fins de semana</translation>
+        <translation>Fins de semana</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="42"/>
         <source>Every day</source>
-        <translation type="unfinished">Diariamente</translation>
+        <translation>Diariamente</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="172"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar um alarme</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation type="unfinished"></translation>
+        <translation>Repetição</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../TimePickerDialog.qml" line="38"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Hora</translation>
     </message>
 </context>
 </TS>
