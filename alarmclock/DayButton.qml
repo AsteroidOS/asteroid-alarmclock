@@ -26,15 +26,16 @@ Item {
     Rectangle {
         anchors.margins: Dims.l(1)
         anchors.fill: parent
-        color: checked ? "#d4962c" : "#8c6e39"
-        border.width: 1
-        border.color: checked ? "#FFFFFF" : "#DDDDDD"
+        color: "#333"
+        opacity: checked ? 0.7 : 0.2
         radius: width/2
     }
 
     Text {
         text: Qt.locale().dayName(day, Locale.ShortFormat)
-        color: checked ? "#FFFFFF" : "#DDDDDD"
+        font.pixelSize: parent.height*0.3
+        color: "white"
+        opacity: checked ? 1.0 : 0.4
         anchors.fill: parent
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter

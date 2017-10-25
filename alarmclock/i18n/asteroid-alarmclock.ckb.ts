@@ -2,39 +2,39 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ckb">
 <context>
-    <name>AlarmTimePickerDialog</name>
+    <name>AlarmListItem</name>
     <message>
-        <location filename="../AlarmTimePickerDialog.qml" line="37"/>
-        <source>New Alarm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../AlarmTimePickerDialog.qml" line="37"/>
-        <source>Edit Alarm</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>AlarmViewRepeater</name>
-    <message>
-        <location filename="../AlarmViewRepeater.qml" line="32"/>
+        <location filename="../AlarmListItem.qml" line="39"/>
         <source>Once</source>
-        <translation>جارێک</translation>
+        <translation type="unfinished">جارێک</translation>
     </message>
     <message>
-        <location filename="../AlarmViewRepeater.qml" line="33"/>
+        <location filename="../AlarmListItem.qml" line="40"/>
         <source>Weekdays</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../AlarmViewRepeater.qml" line="34"/>
+        <location filename="../AlarmListItem.qml" line="41"/>
         <source>Weekends</source>
-        <translation>کۆتایی هەفتە</translation>
+        <translation type="unfinished">کۆتایی هەفتە</translation>
     </message>
     <message>
-        <location filename="../AlarmViewRepeater.qml" line="35"/>
+        <location filename="../AlarmListItem.qml" line="42"/>
         <source>Every day</source>
-        <translation>هەموو ڕۆژێک</translation>
+        <translation type="unfinished">هەموو ڕۆژێک</translation>
+    </message>
+    <message>
+        <location filename="../AlarmListItem.qml" line="172"/>
+        <source>Add an alarm</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DaysSelectorDialog</name>
+    <message>
+        <location filename="../DaysSelectorDialog.qml" line="36"/>
+        <source>Repetition</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -46,15 +46,10 @@
     </message>
 </context>
 <context>
-    <name>main</name>
+    <name>TimePickerDialog</name>
     <message>
-        <location filename="../main.qml" line="59"/>
-        <source>Alarms</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../main.qml" line="76"/>
-        <source>No alarms</source>
+        <location filename="../TimePickerDialog.qml" line="38"/>
+        <source>Time</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

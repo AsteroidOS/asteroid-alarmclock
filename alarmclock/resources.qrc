@@ -1,8 +1,10 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>PageDot.qml</file>
         <file>DayButton.qml</file>
-        <file>AlarmTimePickerDialog.qml</file>
-        <file>AlarmViewRepeater.qml</file>
+        <file>TimePickerDialog.qml</file>
+        <file>DaysSelectorDialog.qml</file>
+        <file>AlarmListItem.qml</file>
     </qresource>
 </RCC>

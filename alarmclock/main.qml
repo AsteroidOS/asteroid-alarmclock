@@ -17,6 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import QtQml 2.2
 import QtQuick 2.8
 import org.nemomobile.alarms 1.0
 import org.asteroid.controls 1.0
@@ -27,64 +28,56 @@ Application {
     centerColor: "#dfb103"
     outerColor: "#be4e0e"
 
-    Component  { id: timePickerLayer;  AlarmTimePickerDialog { } }
+    Component  { id: timePickerLayer;  TimePickerDialog { } }
+    Component  { id: daysSelectorLayer;  DaysSelectorDialog { } }
     LayerStack {
         id: layerStack
         firstPage: firstPageComponent
     }
 
-    AlarmsModel  { id: alarmModel }
+    AlarmsModel { id: alarmModel }
+    Instantiator {
+        // This component is needed to access alarmModel.count() and alarmModel.get()
+        id: alarmModelAccessor
+        model: alarmModel
+        delegate: QtObject { property QtObject alarmObject: alarm }
+    }
 
     Component {
         id: firstPageComponent
         Item {
-            Flickable {
-                contentHeight: col.height
-                contentWidth: width
-                boundsBehavior: Flickable.DragOverBounds
-                flickableDirection: Flickable.VerticalFlick
-                anchors.fill: parent
-                interactive: alarmModel.populated && alarmList.count !== 0
-                Column {
-                    id: col
-                    width: parent.width
-                    Text {
-                        id: title
-                        color: "white"
-                        text: qsTr("Alarms")
-                        verticalAlignment: Text.AlignVCenter
-                        horizontalAlignment: Text.AlignHCenter
-                        width: parent.width; height: Dims.h(22)
-                    }
-
-                    AlarmViewRepeater {
-                        id: alarmList
-                        model: alarmModel
-                        onEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
-                    }
-
-                    Item { width: parent.width; height: Dims.h(20) }
-                }
-            }
-
-            Text {
-                text: qsTr("No alarms")
-                color: "white"
-                font.pixelSize: Dims.l(8)
-                visible: alarmModel.populated && alarmList.count === 0
-                anchors.centerIn: parent
-            }
-
-            IconButton {
-                id: newAlarmBtn
-                iconColor: "white"
-                pressedIconColor: "lightgrey"
-                iconName:  "ios-add-circle-outline"
-                visible: alarmModel.populated
+            PageDot {
+                height: Dims.h(3)
                 anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: Dims.iconButtonMargin
-                onClicked: layerStack.push(timePickerLayer)
+                anchors.top: parent.top
+                anchors.topMargin: 3*Dims.iconButtonMargin
+                currentIndex: flick.currentIndex
+                dotNumber: alarmModelAccessor.count
+            }
+
+            ListView {
+                id: flick
+                anchors.fill: parent
+                model: alarmModelAccessor.count+1
+
+                highlight: Item { width: app.width }
+                clip: true
+                snapMode: ListView.SnapToItem
+                orientation: Qt.Horizontal
+
+                property int currentIndex: Math.round(contentX/(app.width))
+
+                delegate: AlarmListItem {
+                    alarm: {
+                        var modelObject = alarmModelAccessor.objectAt(index)
+                        if(modelObject !== null)
+                            modelObject.alarmObject
+                        else
+                            return null
+                    }
+                    onTimeEditClicked: layerStack.push(timePickerLayer, {"alarmObject": alarm})
+                    onDaysEditClicked: layerStack.push(daysSelectorLayer, {"alarmObject": alarm})
+                }
             }
         }
     }

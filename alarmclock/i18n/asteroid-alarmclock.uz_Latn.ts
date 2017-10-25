@@ -2,39 +2,39 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="uz_Latn">
 <context>
-    <name>AlarmTimePickerDialog</name>
+    <name>AlarmListItem</name>
     <message>
-        <location filename="../AlarmTimePickerDialog.qml" line="37"/>
-        <source>New Alarm</source>
-        <translation>Uyg&apos;otgich qo&apos;shish</translation>
+        <location filename="../AlarmListItem.qml" line="39"/>
+        <source>Once</source>
+        <translation type="unfinished">Bir marta</translation>
     </message>
     <message>
-        <location filename="../AlarmTimePickerDialog.qml" line="37"/>
-        <source>Edit Alarm</source>
-        <translation>Uyg&apos;otgichni sozlash</translation>
+        <location filename="../AlarmListItem.qml" line="40"/>
+        <source>Weekdays</source>
+        <translation type="unfinished">Ish kunlari</translation>
+    </message>
+    <message>
+        <location filename="../AlarmListItem.qml" line="41"/>
+        <source>Weekends</source>
+        <translation type="unfinished">Xafta oxiri</translation>
+    </message>
+    <message>
+        <location filename="../AlarmListItem.qml" line="42"/>
+        <source>Every day</source>
+        <translation type="unfinished">Har kuni</translation>
+    </message>
+    <message>
+        <location filename="../AlarmListItem.qml" line="172"/>
+        <source>Add an alarm</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>AlarmViewRepeater</name>
+    <name>DaysSelectorDialog</name>
     <message>
-        <location filename="../AlarmViewRepeater.qml" line="32"/>
-        <source>Once</source>
-        <translation>Bir marta</translation>
-    </message>
-    <message>
-        <location filename="../AlarmViewRepeater.qml" line="33"/>
-        <source>Weekdays</source>
-        <translation>Ish kunlari</translation>
-    </message>
-    <message>
-        <location filename="../AlarmViewRepeater.qml" line="34"/>
-        <source>Weekends</source>
-        <translation>Xafta oxiri</translation>
-    </message>
-    <message>
-        <location filename="../AlarmViewRepeater.qml" line="35"/>
-        <source>Every day</source>
-        <translation>Har kuni</translation>
+        <location filename="../DaysSelectorDialog.qml" line="36"/>
+        <source>Repetition</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -46,16 +46,11 @@
     </message>
 </context>
 <context>
-    <name>main</name>
+    <name>TimePickerDialog</name>
     <message>
-        <location filename="../main.qml" line="59"/>
-        <source>Alarms</source>
-        <translation>Uyg&apos;otgichlar</translation>
-    </message>
-    <message>
-        <location filename="../main.qml" line="76"/>
-        <source>No alarms</source>
-        <translation>Uyg&apos;otgich yo&apos;q</translation>
+        <location filename="../TimePickerDialog.qml" line="38"/>
+        <source>Time</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

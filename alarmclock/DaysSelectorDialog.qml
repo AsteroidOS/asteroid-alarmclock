@@ -24,18 +24,17 @@ import org.asteroid.controls 1.0
 Item {
     id: root
     property var alarmObject
+    property bool isNewAlarm: typeof alarmObject === 'undefined'
+    property int newAlarmHour: 0
+    property int newAlarmMinute: 0
     property var pop
-
-    function zeroPadding(x) {
-        if (x<10) return "0"+x;
-        else      return x;
-    }
+    property var popTimePicker
 
     Text {
         id: title
         color: "white"
-        text: typeof alarmObject === 'undefined' ? qsTr("New Alarm").toUpperCase() : qsTr("Edit Alarm").toUpperCase()
-        height: Dims.h(15)
+        text: qsTr("Repetition").toUpperCase()
+        height: Dims.h(20)
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
@@ -45,79 +44,37 @@ Item {
 
     Row {
         id: firstDaysRow
-        anchors.top: title.bottom
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: -Dims.h(10)
         anchors.horizontalCenter: parent.horizontalCenter
-        height: Dims.h(16)
-        width: Dims.w(48)
+        height: Dims.h(20)
+        width: Dims.w(80)
         DayButton { id: buttonDayMon; day: 1; checked: false; width: firstDaysRow.height; height: firstDaysRow.height }
         DayButton { id: buttonDayTue; day: 2; checked: false; width: firstDaysRow.height; height: firstDaysRow.height }
         DayButton { id: buttonDayWed; day: 3; checked: false; width: firstDaysRow.height; height: firstDaysRow.height }
+        DayButton { id: buttonDayThu; day: 4; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
     }
     Row {
         id: secondDaysRow
-        anchors.top: firstDaysRow.bottom
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: Dims.h(10)
         anchors.horizontalCenter: parent.horizontalCenter
-        height: Dims.h(16)
-        width: Dims.w(64)
-        DayButton { id: buttonDayThu; day: 4; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
+        height: Dims.h(20)
+        width: Dims.w(60)
         DayButton { id: buttonDayFri; day: 5; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
         DayButton { id: buttonDaySat; day: 6; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
         DayButton { id: buttonDaySun; day: 7; checked: false; width: secondDaysRow.height; height: secondDaysRow.height }
     }
 
-    Row {
-        id: timeSelector
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: secondDaysRow.bottom
-        anchors.topMargin: Dims.h(5)
-        height: Dims.h(28)
-
-        CircularSpinner {
-            id: hourLV
-            height: parent.height
-            width: parent.width/2
-            model: 24
-            showSeparator: true
-        }
-
-        CircularSpinner {
-            id: minuteLV
-            height: parent.height
-            width: parent.width/2
-            model: 60
-        }
-    }
-
     IconButton {
-        iconName: "ios-trash-circle"
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
-        visible: typeof alarmObject !== 'undefined'
-        anchors.right: parent.horizontalCenter
-        anchors.rightMargin: Dims.w(2)
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: Dims.iconButtonMargin
-        onClicked: {
-            alarmObject.deleteAlarm()
-            root.pop()
-        }
-    }
-
-    IconButton {
-        anchors.left: typeof alarmObject !== 'undefined' ? parent.horizontalCenter : undefined
-        anchors.leftMargin: Dims.w(2)
-        anchors.horizontalCenter: typeof alarmObject !== 'undefined' ? undefined : parent.horizontalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.iconButtonMargin
 
-        iconName: typeof alarmObject !== 'undefined' ? "ios-checkmark-circle-outline" : "ios-add-circle-outline"
+        iconName: !isNewAlarm ? "ios-checkmark-circle-outline" : "ios-add-circle-outline"
         iconColor: "white"
-        pressedIconColor: "lightgrey"
 
         onClicked: {
-            if(typeof alarmObject !== 'undefined') alarmObject.deleteAlarm();
-
             var daysString = "";
             if(buttonDayMon.checked) daysString = "m"
             if(buttonDayTue.checked) daysString = daysString + "t"
@@ -128,29 +85,28 @@ Item {
             if(buttonDaySun.checked) daysString = daysString + "S"
 
             var alarm = alarmModel.createAlarm();
-            alarm.hour = hourLV.currentIndex;
-            alarm.minute = minuteLV.currentIndex;
-            alarm.title = daysString;
+            if(!isNewAlarm) {
+                alarm.hour = alarmObject.hour;
+                alarm.minute = alarmObject.minute;
+                alarmObject.deleteAlarm();
+            } else {
+                alarm.hour = newAlarmHour;
+                alarm.minute = newAlarmMinute;
+            }
+
+            alarm.title = "";
             alarm.daysOfWeek = daysString;
             alarm.enabled = true;
 
             alarm.save()
 
+            if(isNewAlarm) root.popTimePicker();
             root.pop();
         }
     }
 
-    WallClock { id: wallClock }
-
     Component.onCompleted: {
-        if (typeof alarmObject === 'undefined') {
-            hourLV.currentIndex = wallClock.time.getHours();
-            minuteLV.currentIndex = wallClock.time.getMinutes();
-        }
-        else {
-            hourLV.currentIndex   = alarmObject.hour;
-            minuteLV.currentIndex = alarmObject.minute;
-
+        if (!isNewAlarm) {
             buttonDayMon.checked = alarmObject.daysOfWeek.indexOf("m") >= 0;
             buttonDayTue.checked = alarmObject.daysOfWeek.indexOf("t") >= 0;
             buttonDayWed.checked = alarmObject.daysOfWeek.indexOf("w") >= 0;
