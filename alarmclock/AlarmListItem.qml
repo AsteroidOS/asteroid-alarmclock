@@ -19,6 +19,7 @@
 
 import QtQuick 2.9
 import org.asteroid.controls 1.0
+import org.nemomobile.configuration 1.0
 
 Item {
     property QtObject alarm
@@ -76,6 +77,12 @@ Item {
         }
     }
 
+    ConfigurationValue {
+        id: use12H
+        key: "/org/asteroidos/settings/use-12h-format"
+        defaultValue: false
+    }
+
     Item {
         width: parent.width
         height: parent.height
@@ -84,10 +91,21 @@ Item {
 
         Text {
             id: time
-            text: !isLastPage ? twoDigits(alarm.hour) + ":" + twoDigits(alarm.minute) : ""
+            text: {
+                if(isLastPage) return ""
+
+                if(use12H.value) {
+                    var amPm = "<font size=\"0.5\">AM</font>";
+                    if(alarm.hour >= 12)
+                        amPm = "<font size=\"0.5\">PM</font>";
+                    return twoDigits(alarm.hour%12) + ":" + twoDigits(alarm.minute) + amPm
+                } else
+                    return twoDigits(alarm.hour) + ":" + twoDigits(alarm.minute)
+            }
             color: "white"
+            textFormat: Text.RichText
             opacity: enableSwitch.checked ? 1.0 : 0.7
-            font.pixelSize: Dims.l(15)
+            font.pixelSize: use12H ? Dims.l(13) : Dims.l(15)
             font.weight: Font.Medium
             anchors.top: enableSwitch.top
             anchors.left: parent.left
