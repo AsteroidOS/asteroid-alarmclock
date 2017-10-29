@@ -20,6 +20,7 @@ import QtQuick 2.9
 import org.nemomobile.alarms 1.0
 import org.nemomobile.ngf 1.0
 import org.nemomobile.dbus 1.0
+import org.nemomobile.configuration 1.0
 import org.asteroid.controls 1.0
 
 Application {
@@ -47,12 +48,30 @@ Application {
         }
     }
 
+    ConfigurationValue {
+        id: use12H
+        key: "/org/asteroidos/settings/use-12h-format"
+        defaultValue: false
+    }
+
     Text {
         id: alarmTimeField
         color: "white"
         font.pixelSize: Dims.l(18)
         anchors.centerIn: parent
-        text: alarmDialog !== undefined && alarmDialog !== null ? twoDigits(alarmDialog.hour) + ":" + twoDigits(alarmDialog.minute) : ""
+        text: {
+            if(alarmDialog == undefined || alarmDialog == null)
+                return ""
+            else {
+                if(use12H.value) {
+                    var amPm = "AM";
+                    if(alarm.hour >= 12)
+                        amPm = "PM";
+                    return twoDigits(alarmDialog.hour%12) + ":" + twoDigits(alarmDialog.minute) + amPm
+                } else
+                    return twoDigits(alarmDialog.hour) + ":" + twoDigits(alarmDialog.minute) : ""
+            }
+        }
     }
 
     IconButton {
