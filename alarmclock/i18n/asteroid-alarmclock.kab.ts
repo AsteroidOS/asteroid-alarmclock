@@ -6,27 +6,27 @@
     <message>
         <location filename="../AlarmListItem.qml" line="39"/>
         <source>Once</source>
-        <translation type="unfinished">yiwet n tikkelt</translation>
+        <translation>yiwet n tikkelt</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="40"/>
         <source>Weekdays</source>
-        <translation type="unfinished">Ussan n dduṛt</translation>
+        <translation>Ussan n dduṛt</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Weekends</source>
-        <translation type="unfinished">Dduṛtat</translation>
+        <translation>Dduṛtat</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="42"/>
         <source>Every day</source>
-        <translation type="unfinished">Yal ass</translation>
+        <translation>Yal ass</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="172"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Rnu aṭenṭen</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation type="unfinished"></translation>
+        <translation>tulsa</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../TimePickerDialog.qml" line="38"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Akud</translation>
     </message>
 </context>
 </TS>
