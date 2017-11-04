@@ -183,7 +183,6 @@ Item {
             anchors.fill: addAlarmBackground
             anchors.margins: Dims.l(3)
             name: "ios-add"
-            color: "white"
         }
 
         Text {

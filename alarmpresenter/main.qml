@@ -76,8 +76,6 @@ Application {
 
     IconButton {
         id: alarmDismiss
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
         iconName: "ios-sunny"
 
         anchors {
@@ -106,8 +104,6 @@ Application {
 
     IconButton {
         id: alarmSnooze
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
         iconName: "ios-moon"
 
         anchors {
