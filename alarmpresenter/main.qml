@@ -69,7 +69,7 @@ Application {
                         amPm = "PM";
                     return twoDigits(alarmDialog.hour%12) + ":" + twoDigits(alarmDialog.minute) + amPm
                 } else
-                    return twoDigits(alarmDialog.hour) + ":" + twoDigits(alarmDialog.minute) : ""
+                    return twoDigits(alarmDialog.hour) + ":" + twoDigits(alarmDialog.minute)
             }
         }
     }
