@@ -77,13 +77,7 @@ Application {
     IconButton {
         id: alarmDismiss
         iconName: "ios-sunny"
-
-        anchors {
-            verticalCenter: parent.verticalCenter
-            leftMargin: Dims.iconButtonMargin
-            left: parent.left
-        }
-
+        edge: Qt.LeftEdge
         onClicked: {
             // Disable the alarm if it is a singleshot
             for(var i = 0; alarmModel.count > i; i++) {
@@ -105,13 +99,7 @@ Application {
     IconButton {
         id: alarmSnooze
         iconName: "ios-moon"
-
-        anchors {
-            verticalCenter: parent.verticalCenter
-            rightMargin: Dims.iconButtonMargin
-            right: parent.right
-        }
-
+        edge: Qt.RightEdge
         onClicked: {
             feedback.stop()
             if(alarmDialog !== undefined && alarmDialog !== null)

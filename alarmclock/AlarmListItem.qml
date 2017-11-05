@@ -155,10 +155,6 @@ Item {
 
         IconButton {
             iconName: "ios-trash-circle"
-            iconColor: "white"
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: Dims.iconButtonMargin
             onClicked: alarm.deleteAlarm()
         }
     }
