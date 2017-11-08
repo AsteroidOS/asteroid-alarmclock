@@ -6,12 +6,12 @@
     <message>
         <location filename="../AlarmListItem.qml" line="39"/>
         <source>Once</source>
-        <translation></translation>
+        <translation>ერთხელ</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="40"/>
         <source>Weekdays</source>
-        <translation></translation>
+        <translation>სამუშაო დღეები</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="41"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../AlarmListItem.qml" line="42"/>
         <source>Every day</source>
-        <translation></translation>
+        <translation>ყოველ დღე</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="172"/>
         <source>Add an alarm</source>
-        <translation></translation>
+        <translation>მაღვიძარას დამათება</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation></translation>
+        <translation>გამეორება</translation>
     </message>
 </context>
 <context>
@@ -42,7 +42,7 @@
     <message>
         <location filename="asteroid-alarmclock.desktop.h" line="5"/>
         <source>Alarm Clock</source>
-        <translation></translation>
+        <translation>მაღვიძარა</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../TimePickerDialog.qml" line="38"/>
         <source>Time</source>
-        <translation></translation>
+        <translation>დრო</translation>
     </message>
 </context>
 </TS>
