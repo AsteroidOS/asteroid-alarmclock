@@ -31,10 +31,9 @@ Item {
         radius: width/2
     }
 
-    Text {
+    Label {
         text: Qt.locale().dayName(day, Locale.ShortFormat)
         font.pixelSize: parent.height*0.3
-        color: "white"
         opacity: checked ? 1.0 : 0.4
         anchors.fill: parent
         verticalAlignment: Text.AlignVCenter

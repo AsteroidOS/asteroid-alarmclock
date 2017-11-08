@@ -39,9 +39,8 @@ Item {
         defaultValue: false
     }
 
-    Text {
+    Label {
         id: title
-        color: "white"
         text: qsTr("Time").toUpperCase()
         height: Dims.h(20)
         anchors.top: parent.top

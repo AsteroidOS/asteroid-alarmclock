@@ -40,12 +40,11 @@ Item {
             }
         }
 
-        Text {
+        Label {
             text: "+"
             width: parent.height
             height: parent.height
             verticalAlignment: Text.AlignVCenter
-            color: "white"
             opacity: currentIndex == dotNumber ? 1 : 0.5
         }
     }
