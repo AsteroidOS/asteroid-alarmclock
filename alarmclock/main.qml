@@ -53,6 +53,7 @@ Application {
                 anchors.topMargin: 3*Dims.iconButtonMargin
                 currentIndex: flick.currentIndex
                 dotNumber: alarmModelAccessor.count
+                additionalDot: true
             }
 
             ListView {

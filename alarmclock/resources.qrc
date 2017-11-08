@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>PageDot.qml</file>
         <file>DayButton.qml</file>
         <file>TimePickerDialog.qml</file>
         <file>DaysSelectorDialog.qml</file>
