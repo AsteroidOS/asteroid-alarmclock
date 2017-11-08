@@ -54,9 +54,8 @@ Application {
         defaultValue: false
     }
 
-    Text {
+    Label {
         id: alarmTimeField
-        color: "white"
         font.pixelSize: Dims.l(18)
         anchors.centerIn: parent
         text: {

@@ -30,9 +30,8 @@ Item {
     property var pop
     property var popTimePicker
 
-    Text {
+    Label {
         id: title
-        color: "white"
         text: qsTr("Repetition").toUpperCase()
         height: Dims.h(20)
         anchors.top: parent.top

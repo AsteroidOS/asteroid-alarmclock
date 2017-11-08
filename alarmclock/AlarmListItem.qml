@@ -89,7 +89,7 @@ Item {
         visible: !isLastPage
         enabled: !isLastPage
 
-        Text {
+        Label {
             id: time
             text: {
                 if(isLastPage) return ""
@@ -102,7 +102,6 @@ Item {
                 } else
                     return twoDigits(alarm.hour) + ":" + twoDigits(alarm.minute)
             }
-            color: "white"
             textFormat: Text.RichText
             opacity: enableSwitch.checked ? 1.0 : 0.7
             font.pixelSize: use12H ? Dims.l(13) : Dims.l(15)
@@ -119,13 +118,11 @@ Item {
             }
         }
 
-        Text {
+        Label {
             id: enabledDays
             textFormat: Text.RichText
             text: !isLastPage ? parseDays(alarm.daysOfWeek) : ""
-            color: "#AAFFFFFF"
             opacity: enableSwitch.checked ? 0.8 : 0.5
-            font.pixelSize: Dims.l(7)
             anchors.bottom: enableSwitch.bottom
             anchors.left: parent.left
             anchors.leftMargin: Dims.w(10)
@@ -181,10 +178,8 @@ Item {
             name: "ios-add"
         }
 
-        Text {
+        Label {
             text: qsTr("Add an alarm")
-            font.pixelSize: Dims.l(7)
-            color: "white"
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.Wrap
