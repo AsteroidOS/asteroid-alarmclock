@@ -16,7 +16,7 @@
     <message>
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Weekends</source>
-        <translation type="unfinished">Fins de semaine</translation>
+        <translation type="unfinished">Week-ends</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="42"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../AlarmListItem.qml" line="172"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ajouter une alarme</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Répétition</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../TimePickerDialog.qml" line="38"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Heure</translation>
     </message>
 </context>
 </TS>
