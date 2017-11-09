@@ -16,7 +16,7 @@
     <message>
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Weekends</source>
-        <translation></translation>
+        <translation>შაბათ-კვირები</translation>
     </message>
     <message>
         <location filename="../AlarmListItem.qml" line="42"/>
