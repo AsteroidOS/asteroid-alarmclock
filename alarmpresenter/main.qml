@@ -27,6 +27,8 @@ Application {
     id: app
     property var alarmDialog
     overridesSystemGestures: alarmDialog !== undefined && alarmDialog !== null
+    leftIndicVisible: false
+    topIndicVisible: false
 
     centerColor: "#333333"
     outerColor: "#000000"
