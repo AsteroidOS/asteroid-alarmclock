@@ -43,6 +43,7 @@ Item {
         id: title
         text: qsTr("Time").toUpperCase()
         height: Dims.h(20)
+        font.pixelSize: Dims.l(6)
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
