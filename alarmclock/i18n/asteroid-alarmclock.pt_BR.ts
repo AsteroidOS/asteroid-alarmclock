@@ -2,55 +2,90 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="pt_BR">
 <context>
+    <name></name>
+    <message id="id-once">
+        <location filename="../AlarmListItem.qml" line="41"/>
+        <source>Once</source>
+        <translation type="unfinished">Uma vez</translation>
+    </message>
+    <message id="id-weekdays">
+        <location filename="../AlarmListItem.qml" line="43"/>
+        <source>Weekdays</source>
+        <translation type="unfinished">Dias da semana</translation>
+    </message>
+    <message id="id-weekends">
+        <location filename="../AlarmListItem.qml" line="45"/>
+        <source>Weekends</source>
+        <translation type="unfinished">Fins de semana</translation>
+    </message>
+    <message id="id-every-day">
+        <location filename="../AlarmListItem.qml" line="47"/>
+        <source>Every day</source>
+        <translation type="unfinished">Diariamente</translation>
+    </message>
+    <message id="id-add-alarm">
+        <location filename="../AlarmListItem.qml" line="187"/>
+        <source>Add an alarm</source>
+        <translation type="unfinished">Adicionar um alarme</translation>
+    </message>
+    <message id="id-repetition">
+        <location filename="../DaysSelectorDialog.qml" line="36"/>
+        <source>Repetition</source>
+        <translation type="unfinished">Repetição</translation>
+    </message>
+    <message id="id-time">
+        <location filename="../TimePickerDialog.qml" line="45"/>
+        <source>Time</source>
+        <translation type="unfinished">Hora</translation>
+    </message>
+    <message id="id-app-launcher-name">
+        <location filename="asteroid-alarmclock.desktop.h" line="6"/>
+        <source>Alarm Clock</source>
+        <translation type="unfinished">Alarme</translation>
+    </message>
+</context>
+<context>
     <name>AlarmListItem</name>
     <message>
-        <location filename="../AlarmListItem.qml" line="39"/>
         <source>Once</source>
-        <translation>Uma vez</translation>
+        <translation type="vanished">Uma vez</translation>
     </message>
     <message>
-        <location filename="../AlarmListItem.qml" line="40"/>
         <source>Weekdays</source>
-        <translation>Dias da semana</translation>
+        <translation type="vanished">Dias da semana</translation>
     </message>
     <message>
-        <location filename="../AlarmListItem.qml" line="41"/>
         <source>Weekends</source>
-        <translation>Fins de semana</translation>
+        <translation type="vanished">Fins de semana</translation>
     </message>
     <message>
-        <location filename="../AlarmListItem.qml" line="42"/>
         <source>Every day</source>
-        <translation>Diariamente</translation>
+        <translation type="vanished">Diariamente</translation>
     </message>
     <message>
-        <location filename="../AlarmListItem.qml" line="172"/>
         <source>Add an alarm</source>
-        <translation>Adicionar um alarme</translation>
+        <translation type="vanished">Adicionar um alarme</translation>
     </message>
 </context>
 <context>
     <name>DaysSelectorDialog</name>
     <message>
-        <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation>Repetição</translation>
+        <translation type="vanished">Repetição</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="asteroid-alarmclock.desktop.h" line="5"/>
         <source>Alarm Clock</source>
-        <translation>Alarme</translation>
+        <translation type="vanished">Alarme</translation>
     </message>
 </context>
 <context>
     <name>TimePickerDialog</name>
     <message>
-        <location filename="../TimePickerDialog.qml" line="38"/>
         <source>Time</source>
-        <translation>Hora</translation>
+        <translation type="vanished">Hora</translation>
     </message>
 </context>
 </TS>

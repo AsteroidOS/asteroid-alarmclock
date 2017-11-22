@@ -2,55 +2,61 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ckb">
 <context>
-    <name>AlarmListItem</name>
-    <message>
-        <location filename="../AlarmListItem.qml" line="39"/>
+    <name></name>
+    <message id="id-once">
+        <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
         <translation type="unfinished">جارێک</translation>
     </message>
-    <message>
-        <location filename="../AlarmListItem.qml" line="40"/>
+    <message id="id-weekdays">
+        <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../AlarmListItem.qml" line="41"/>
+    <message id="id-weekends">
+        <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
         <translation type="unfinished">کۆتایی هەفتە</translation>
     </message>
-    <message>
-        <location filename="../AlarmListItem.qml" line="42"/>
+    <message id="id-every-day">
+        <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
         <translation type="unfinished">هەموو ڕۆژێک</translation>
     </message>
-    <message>
-        <location filename="../AlarmListItem.qml" line="172"/>
+    <message id="id-add-alarm">
+        <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>DaysSelectorDialog</name>
-    <message>
+    <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <location filename="asteroid-alarmclock.desktop.h" line="5"/>
+    <message id="id-time">
+        <location filename="../TimePickerDialog.qml" line="45"/>
+        <source>Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-app-launcher-name">
+        <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>TimePickerDialog</name>
+    <name>AlarmListItem</name>
     <message>
-        <location filename="../TimePickerDialog.qml" line="38"/>
-        <source>Time</source>
-        <translation type="unfinished"></translation>
+        <source>Once</source>
+        <translation type="obsolete">جارێک</translation>
+    </message>
+    <message>
+        <source>Weekends</source>
+        <translation type="obsolete">کۆتایی هەفتە</translation>
+    </message>
+    <message>
+        <source>Every day</source>
+        <translation type="obsolete">هەموو ڕۆژێک</translation>
     </message>
 </context>
 </TS>

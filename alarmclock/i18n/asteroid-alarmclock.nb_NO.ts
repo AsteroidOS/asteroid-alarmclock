@@ -2,55 +2,90 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="nb_NO">
 <context>
+    <name></name>
+    <message id="id-once">
+        <location filename="../AlarmListItem.qml" line="41"/>
+        <source>Once</source>
+        <translation type="unfinished">Én gang</translation>
+    </message>
+    <message id="id-weekdays">
+        <location filename="../AlarmListItem.qml" line="43"/>
+        <source>Weekdays</source>
+        <translation type="unfinished">Hverdager</translation>
+    </message>
+    <message id="id-weekends">
+        <location filename="../AlarmListItem.qml" line="45"/>
+        <source>Weekends</source>
+        <translation type="unfinished">Helger</translation>
+    </message>
+    <message id="id-every-day">
+        <location filename="../AlarmListItem.qml" line="47"/>
+        <source>Every day</source>
+        <translation type="unfinished">Hver dag</translation>
+    </message>
+    <message id="id-add-alarm">
+        <location filename="../AlarmListItem.qml" line="187"/>
+        <source>Add an alarm</source>
+        <translation type="unfinished">Legg til en alarm</translation>
+    </message>
+    <message id="id-repetition">
+        <location filename="../DaysSelectorDialog.qml" line="36"/>
+        <source>Repetition</source>
+        <translation type="unfinished">Gjentagelse</translation>
+    </message>
+    <message id="id-time">
+        <location filename="../TimePickerDialog.qml" line="45"/>
+        <source>Time</source>
+        <translation type="unfinished">Tidspunkt</translation>
+    </message>
+    <message id="id-app-launcher-name">
+        <location filename="asteroid-alarmclock.desktop.h" line="6"/>
+        <source>Alarm Clock</source>
+        <translation type="unfinished">Alarm</translation>
+    </message>
+</context>
+<context>
     <name>AlarmListItem</name>
     <message>
-        <location filename="../AlarmListItem.qml" line="39"/>
         <source>Once</source>
-        <translation>Én gang</translation>
+        <translation type="vanished">Én gang</translation>
     </message>
     <message>
-        <location filename="../AlarmListItem.qml" line="40"/>
         <source>Weekdays</source>
-        <translation>Hverdager</translation>
+        <translation type="vanished">Hverdager</translation>
     </message>
     <message>
-        <location filename="../AlarmListItem.qml" line="41"/>
         <source>Weekends</source>
-        <translation>Helger</translation>
+        <translation type="vanished">Helger</translation>
     </message>
     <message>
-        <location filename="../AlarmListItem.qml" line="42"/>
         <source>Every day</source>
-        <translation>Hver dag</translation>
+        <translation type="vanished">Hver dag</translation>
     </message>
     <message>
-        <location filename="../AlarmListItem.qml" line="172"/>
         <source>Add an alarm</source>
-        <translation>Legg til en alarm</translation>
+        <translation type="vanished">Legg til en alarm</translation>
     </message>
 </context>
 <context>
     <name>DaysSelectorDialog</name>
     <message>
-        <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation>Gjentagelse</translation>
+        <translation type="vanished">Gjentagelse</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="asteroid-alarmclock.desktop.h" line="5"/>
         <source>Alarm Clock</source>
-        <translation>Alarm</translation>
+        <translation type="vanished">Alarm</translation>
     </message>
 </context>
 <context>
     <name>TimePickerDialog</name>
     <message>
-        <location filename="../TimePickerDialog.qml" line="38"/>
         <source>Time</source>
-        <translation>Tidspunkt</translation>
+        <translation type="vanished">Tidspunkt</translation>
     </message>
 </context>
 </TS>
