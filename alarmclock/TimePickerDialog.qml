@@ -41,7 +41,8 @@ Item {
 
     Label {
         id: title
-        text: qsTr("Time").toUpperCase()
+        //% "Time"
+        text: qsTrId("id-time").toUpperCase()
         height: Dims.h(20)
         font.pixelSize: Dims.l(6)
         anchors.top: parent.top

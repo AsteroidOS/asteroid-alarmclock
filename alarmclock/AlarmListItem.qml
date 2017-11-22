@@ -37,10 +37,14 @@ Item {
     }
 
     function parseDays(days) {
-        if      (days === "")        return qsTr("Once");
-        else if (days === "mtwTf")   return qsTr("Weekdays");
-        else if (days === "sS")      return qsTr("Weekends");
-        else if (days === "mtwTfsS") return qsTr("Every day");
+        //% "Once"
+        if      (days === "")        return qsTrId("id-once");
+        //% "Weekdays"
+        else if (days === "mtwTf")   return qsTrId("id-weekdays");
+        //% "Weekends"
+        else if (days === "sS")      return qsTrId("id-weekends");
+        //% "Every day"
+        else if (days === "mtwTfsS") return qsTrId("id-every-day");
         else {
             var returnString = "";
             var boldLetterOpening = "<b style=\"color:white;\">";
@@ -179,7 +183,8 @@ Item {
         }
 
         Label {
-            text: qsTr("Add an alarm")
+            //% "Add an alarm"
+            text: qsTrId("id-add-alarm")
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.Wrap
