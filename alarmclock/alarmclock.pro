@@ -9,12 +9,5 @@ OTHER_FILES += main.qml \
                DaysSelectorDialog.qml \
                AlarmListItem.qml
 
-lupdate_only{
-    SOURCES = main.qml \
-              DayButton.qml \
-              TimePickerDialog.qml \
-              DaysSelectorDialog.qml \
-              AlarmListItem.qml \
-              i18n/asteroid-alarmclock.desktop.h
-}
+lupdate_only{ SOURCES += i18n/asteroid-alarmclock.desktop.h }
 TRANSLATIONS = $$files(i18n/$$TARGET.*.ts)
