@@ -6,7 +6,7 @@
     <message id="id-once">
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
-        <translation type="unfinished">جارێک</translation>
+        <translation>جارێک</translation>
     </message>
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
@@ -16,12 +16,12 @@
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation type="unfinished">کۆتایی هەفتە</translation>
+        <translation>کۆتایی هەفتە</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation type="unfinished">هەموو ڕۆژێک</translation>
+        <translation>هەموو ڕۆژێک</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
@@ -42,21 +42,6 @@
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>AlarmListItem</name>
-    <message>
-        <source>Once</source>
-        <translation type="obsolete">جارێک</translation>
-    </message>
-    <message>
-        <source>Weekends</source>
-        <translation type="obsolete">کۆتایی هەفتە</translation>
-    </message>
-    <message>
-        <source>Every day</source>
-        <translation type="obsolete">هەموو ڕۆژێک</translation>
     </message>
 </context>
 </TS>

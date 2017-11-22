@@ -6,86 +6,42 @@
     <message id="id-once">
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
-        <translation type="unfinished">Einmalig</translation>
+        <translation>Einmalig</translation>
     </message>
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation type="unfinished">An Werktagen</translation>
+        <translation>An Werktagen</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation type="unfinished">Am Wochenende</translation>
+        <translation>Am Wochenende</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation type="unfinished">Täglich</translation>
+        <translation>Täglich</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation type="unfinished">Alarm hinzufügen</translation>
+        <translation>Alarm hinzufügen</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation type="unfinished">Wiederholung</translation>
+        <translation>Wiederholung</translation>
     </message>
     <message id="id-time">
         <location filename="../TimePickerDialog.qml" line="45"/>
         <source>Time</source>
-        <translation type="unfinished">Uhrzeit</translation>
+        <translation>Uhrzeit</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished">Wecker</translation>
-    </message>
-</context>
-<context>
-    <name>AlarmListItem</name>
-    <message>
-        <source>Once</source>
-        <translation type="obsolete">Einmalig</translation>
-    </message>
-    <message>
-        <source>Weekdays</source>
-        <translation type="vanished">An Werktagen</translation>
-    </message>
-    <message>
-        <source>Weekends</source>
-        <translation type="vanished">Am Wochenende</translation>
-    </message>
-    <message>
-        <source>Every day</source>
-        <translation type="vanished">Täglich</translation>
-    </message>
-    <message>
-        <source>Add an alarm</source>
-        <translation type="obsolete">Alarm hinzufügen</translation>
-    </message>
-</context>
-<context>
-    <name>DaysSelectorDialog</name>
-    <message>
-        <source>Repetition</source>
-        <translation type="vanished">Wiederholung</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <source>Alarm Clock</source>
-        <translation type="vanished">Wecker</translation>
-    </message>
-</context>
-<context>
-    <name>TimePickerDialog</name>
-    <message>
-        <source>Time</source>
-        <translation type="vanished">Uhrzeit</translation>
+        <translation>Wecker</translation>
     </message>
 </context>
 </TS>

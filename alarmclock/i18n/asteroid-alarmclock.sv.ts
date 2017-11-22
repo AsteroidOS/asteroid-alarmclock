@@ -6,22 +6,22 @@
     <message id="id-once">
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
-        <translation type="unfinished">En gång</translation>
+        <translation>En gång</translation>
     </message>
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation type="unfinished">Veckodagar</translation>
+        <translation>Veckodagar</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation type="unfinished">Helger</translation>
+        <translation>Helger</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation type="unfinished">Varje dag</translation>
+        <translation>Varje dag</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
@@ -41,33 +41,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished">Alarm</translation>
-    </message>
-</context>
-<context>
-    <name>AlarmListItem</name>
-    <message>
-        <source>Once</source>
-        <translation type="obsolete">En gång</translation>
-    </message>
-    <message>
-        <source>Weekdays</source>
-        <translation type="obsolete">Veckodagar</translation>
-    </message>
-    <message>
-        <source>Weekends</source>
-        <translation type="obsolete">Helger</translation>
-    </message>
-    <message>
-        <source>Every day</source>
-        <translation type="obsolete">Varje dag</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <source>Alarm Clock</source>
-        <translation type="vanished">Alarm</translation>
+        <translation>Alarm</translation>
     </message>
 </context>
 </TS>
