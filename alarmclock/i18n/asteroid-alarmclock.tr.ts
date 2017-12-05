@@ -26,17 +26,17 @@
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation>Bir alarm ekle</translation>
+        <translation>Alarm ekle</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation>Tekrarlanma</translation>
+        <translation>Yinelenme</translation>
     </message>
     <message id="id-time">
         <location filename="../TimePickerDialog.qml" line="45"/>
         <source>Time</source>
-        <translation>Zaman</translation>
+        <translation>Saat</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
