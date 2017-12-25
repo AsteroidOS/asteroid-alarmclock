@@ -11,12 +11,12 @@
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation>An Werktagen</translation>
+        <translation>Wochentags</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation>Am Wochenende</translation>
+        <translation>Wochenenden</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
