@@ -88,10 +88,11 @@ Item {
 
             alarm.save()
 
-            if(isNewAlarm) root.popTimePicker();
             root.pop();
         }
     }
+
+    Component.onDestruction: if(isNewAlarm) root.popTimePicker()
 
     Component.onCompleted: {
         if (!isNewAlarm) {
