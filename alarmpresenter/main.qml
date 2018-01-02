@@ -56,10 +56,15 @@ Application {
         defaultValue: false
     }
 
+    StatusPage {
+        icon: "ios-alarm-outline"
+    }
+
     Label {
         id: alarmTimeField
-        font.pixelSize: Dims.l(18)
+        font.pixelSize: Dims.l(15)
         anchors.centerIn: parent
+        anchors.verticalCenterOffset: Dims.h(13)
         text: {
             if(alarmDialog == undefined || alarmDialog == null)
                 return ""
@@ -77,7 +82,7 @@ Application {
 
     IconButton {
         id: alarmDismiss
-        iconName: "ios-sunny"
+        iconName: "ios-checkmark-circle-outline"
         edge: Qt.LeftEdge
         onClicked: {
             // Disable the alarm if it is a singleshot
@@ -99,7 +104,7 @@ Application {
 
     IconButton {
         id: alarmSnooze
-        iconName: "ios-moon"
+        iconName: "ios-sleep-circle-outline"
         edge: Qt.RightEdge
         onClicked: {
             feedback.stop()
