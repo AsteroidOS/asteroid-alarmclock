@@ -118,7 +118,7 @@ Application {
 
     NonGraphicalFeedback {
         id: feedback
-        event: "clock"
+        event: "alarm"
     }
 
     DBusInterface {
