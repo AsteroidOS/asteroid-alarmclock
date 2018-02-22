@@ -17,10 +17,10 @@
  */
 
 import QtQuick 2.9
-import org.nemomobile.alarms 1.0
-import org.nemomobile.ngf 1.0
-import org.nemomobile.dbus 1.0
-import org.nemomobile.configuration 1.0
+import Nemo.Alarms 1.0
+import Nemo.DBus 2.0
+import Nemo.Configuration 1.0
+import Nemo.Ngf 1.0
 import org.asteroid.controls 1.0
 
 Application {
@@ -124,11 +124,11 @@ Application {
     DBusInterface {
         id: mceRequest
 
-        destination: "com.nokia.mce"
+        service: "com.nokia.mce"
         path: "/com/nokia/mce/request"
         iface: "com.nokia.mce.request"
 
-        busType: DBusInterface.SystemBus
+        bus: DBus.SystemBus
     }
 
     Timer {

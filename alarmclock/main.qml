@@ -19,7 +19,7 @@
 
 import QtQml 2.2
 import QtQuick 2.8
-import org.nemomobile.alarms 1.0
+import Nemo.Alarms 1.0
 import org.asteroid.controls 1.0
 
 Application {
