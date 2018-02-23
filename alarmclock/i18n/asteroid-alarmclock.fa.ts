@@ -41,7 +41,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
-        <translation>زنگ ساعت</translation>
+        <translation>ساعت هشدار</translation>
     </message>
 </context>
 </TS>
