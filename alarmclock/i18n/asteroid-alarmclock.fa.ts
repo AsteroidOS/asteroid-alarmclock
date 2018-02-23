@@ -6,12 +6,12 @@
     <message id="id-once">
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
-        <translation>یک بار</translation>
+        <translation>یک‌بار</translation>
     </message>
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation>روزهای کاری</translation>
+        <translation>روز‌های هفته</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
@@ -21,22 +21,22 @@
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation>هرروز</translation>
+        <translation>هر روز</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>افزودن هشدار</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation type="unfinished"></translation>
+        <translation>تکرار</translation>
     </message>
     <message id="id-time">
         <location filename="../TimePickerDialog.qml" line="45"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>زمان</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
