@@ -26,12 +26,12 @@
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>알람 추가</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation type="unfinished"></translation>
+        <translation>반복</translation>
     </message>
     <message id="id-time">
         <location filename="../TimePickerDialog.qml" line="45"/>
