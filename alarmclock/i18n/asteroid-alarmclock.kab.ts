@@ -6,7 +6,7 @@
     <message id="id-once">
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
-        <translation>yiwet n tikkelt</translation>
+        <translation>Yiwet n tikkelt</translation>
     </message>
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
