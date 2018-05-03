@@ -11,7 +11,7 @@
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation>Giorni della Settimana</translation>
+        <translation>Giorni feriali</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
@@ -31,7 +31,7 @@
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation>Ripeti</translation>
+        <translation>Ripetizione</translation>
     </message>
     <message id="id-time">
         <location filename="../TimePickerDialog.qml" line="45"/>
