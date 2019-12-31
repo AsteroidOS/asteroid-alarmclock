@@ -11,12 +11,12 @@
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation>Radni dani</translation>
+        <translation>Radnim danima</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation>Vikendi</translation>
+        <translation>Vikendima</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
@@ -41,7 +41,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
-        <translation>Alarm</translation>
+        <translation>Budilica</translation>
     </message>
 </context>
 </TS>
