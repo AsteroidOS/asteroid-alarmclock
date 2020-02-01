@@ -6,7 +6,7 @@
     <message id="id-once">
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
-        <translation>Pojedynczy</translation>
+        <translation>Raz</translation>
     </message>
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
@@ -26,7 +26,7 @@
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation>Ustaw alarm</translation>
+        <translation>Dodaj alarm</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
