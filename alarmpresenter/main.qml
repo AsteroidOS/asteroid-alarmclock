@@ -43,7 +43,7 @@ Application {
         id: alarmHandler
         onError: console.log("asteroid-alarmpresenter: error in AlarmHandler: " + message);
         onActiveDialogsChanged: {
-            if (activeDialogs.length > 0 && activeDialogs[0].type === Alarm.Clock) {
+            if (activeDialogs.length > 0 && (activeDialogs[0].type === Alarm.Clock || activeDialogs[0].type === Alarm.Countdown)) {
                 alarmDialog = activeDialogs[0]
                 dialogOnScreen = true
             }
@@ -57,7 +57,7 @@ Application {
     }
 
     StatusPage {
-        icon: "ios-alarm-outline"
+        icon: (alarmDialog && (alarmDialog.type === Alarm.Countdown)) ? "ios-timer-outline" : "ios-alarm-outline"
     }
 
     Label {
@@ -106,6 +106,7 @@ Application {
         id: alarmSnooze
         iconName: "ios-sleep-circle-outline"
         edge: Qt.RightEdge
+        visible: (alarmDialog !== undefined && alarmDialog !== null) && (alarmDialog.type !== Alarm.Countdown)
         onClicked: {
             feedback.stop()
             if(alarmDialog !== undefined && alarmDialog !== null)
