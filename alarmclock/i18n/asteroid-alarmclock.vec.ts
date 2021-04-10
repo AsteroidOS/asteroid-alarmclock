@@ -6,42 +6,42 @@
     <message id="id-once">
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Na volta</translation>
     </message>
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation type="unfinished"></translation>
+        <translation>Dì de ła stimana</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>Fin de ła stimana</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuti i dì</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Zonta sveja</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
         <source>Repetition</source>
-        <translation type="unfinished"></translation>
+        <translation>Ripetision</translation>
     </message>
     <message id="id-time">
         <location filename="../TimePickerDialog.qml" line="45"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Ora</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>Sveja</translation>
     </message>
 </context>
 </TS>
