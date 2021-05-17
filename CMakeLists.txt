@@ -18,7 +18,7 @@ include(AsteroidTranslations)
 
 option(SYSTEMD "Install systemd related files" ON)
 
-find_package(QDeclarative REQUIRED)
+find_package(Mapplauncherd_qt5 REQUIRED)
 
 ecm_find_qmlmodule(Nemo.Configuration 1.0)
 ecm_find_qmlmodule(Nemo.Alarms 1.0)
