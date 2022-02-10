@@ -25,8 +25,8 @@ import org.asteroid.controls 1.0
 Application {
     id: app
 
-    centerColor: "#dfb103"
-    outerColor: "#be4e0e"
+    centerColor: "#CC9800"
+    outerColor: "#0C0500"
 
     Component  { id: timePickerLayer;  TimePickerDialog { } }
     Component  { id: daysSelectorLayer;  DaysSelectorDialog { } }
