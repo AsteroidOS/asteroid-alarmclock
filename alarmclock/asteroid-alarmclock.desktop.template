@@ -3,5 +3,5 @@ Type=Application
 Categories=Applications;
 Exec=invoker --single-instance --type=qtcomponents-qt5 /usr/bin/asteroid-alarmclock
 Icon=ios-alarm-outline
-X-Asteroid-Center-Color=#dfb103
-X-Asteroid-Outer-Color=#be4e0e
+X-Asteroid-Center-Color=#CC9800
+X-Asteroid-Outer-Color=#0C0500
