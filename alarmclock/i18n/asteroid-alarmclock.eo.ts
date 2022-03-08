@@ -11,22 +11,22 @@
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation type="unfinished"></translation>
+        <translation>Labortagoj</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>Semajnfinoj</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ĉiutaga</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Adiciu alarmon</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
@@ -41,7 +41,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>Vekhorloĝo</translation>
     </message>
 </context>
 </TS>
