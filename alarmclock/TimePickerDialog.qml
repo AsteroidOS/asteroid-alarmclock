@@ -82,6 +82,11 @@ Item {
 
     IconButton {
         iconName: !isNewAlarm ? "ios-checkmark-circle-outline" : "ios-arrow-dropright"
+        anchors { 
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+            bottomMargin: Dims.iconButtonMargin
+        }
 
         onClicked: {
             if(!isNewAlarm) {

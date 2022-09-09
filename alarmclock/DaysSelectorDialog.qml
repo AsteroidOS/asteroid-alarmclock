@@ -61,6 +61,11 @@ Item {
 
     IconButton {
         iconName: !isNewAlarm ? "ios-checkmark-circle-outline" : "ios-add-circle-outline"
+        anchors { 
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+            bottomMargin: Dims.iconButtonMargin
+        }
 
         onClicked: {
             var daysString = "";
