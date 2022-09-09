@@ -83,7 +83,11 @@ Application {
     IconButton {
         id: alarmDismiss
         iconName: "ios-checkmark-circle-outline"
-        edge: Qt.LeftEdge
+        anchors {
+            left: parent.left
+            verticalCenter: parent.verticalCenter
+            leftMargin: Dims.iconButtonMargin
+        }
         onClicked: {
             // Disable the alarm if it is a singleshot
             for(var i = 0; alarmModel.count > i; i++) {
@@ -105,7 +109,11 @@ Application {
     IconButton {
         id: alarmSnooze
         iconName: "ios-sleep-circle-outline"
-        edge: Qt.RightEdge
+        anchors {
+            right: parent.right
+            verticalCenter: parent.verticalCenter
+            rightMargin: Dims.iconButtonMargin
+        }
         visible: (alarmDialog !== undefined && alarmDialog !== null) && (alarmDialog.type !== Alarm.Countdown)
         onClicked: {
             feedback.stop()
