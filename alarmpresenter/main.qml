@@ -22,6 +22,7 @@ import Nemo.DBus 2.0
 import Nemo.Configuration 1.0
 import Nemo.Ngf 1.0
 import org.asteroid.controls 1.0
+import QtMultimedia 5.4
 
 Application {
     id: app
@@ -172,9 +173,15 @@ Application {
         }
     }
 
+    Audio {
+        id: notificationSound
+        source: "file:///usr/share/sounds/notification.wav"
+    }
+
     Component.onCompleted: {
         mceRequest.call("req_display_state_on", undefined)
         feedback.play()
+        notificationSound.play()
         autoSnoozeTimer.start()
     }
 }
