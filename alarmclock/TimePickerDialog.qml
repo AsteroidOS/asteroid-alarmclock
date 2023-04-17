@@ -21,6 +21,7 @@ import QtQuick 2.9
 import Nemo.Time 1.0
 import Nemo.Configuration 1.0
 import org.asteroid.controls 1.0
+import org.asteroid.utils 1.0
 
 Item {
     id: root
@@ -47,9 +48,13 @@ Item {
 
     Row {
         id: timeSelector
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: title.bottom
+        anchors {
+            left: parent.left
+            leftMargin: DeviceInfo.hasRoundScreen ? Dims.w(5) : 0
+            right: parent.right
+            rightMargin: DeviceInfo.hasRoundScreen ? Dims.w(5) : 0
+            top: title.bottom
+        }
         height: Dims.h(60)
 
         property int spinnerWidth: use12H.value ? width/3 : width/2
