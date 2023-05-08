@@ -7,5 +7,5 @@ Type=dbus
 BusName=com.nokia.voland
 Environment=QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 EnvironmentFile=-/var/lib/environment/mapplauncherd/qtcomponents-qt5.conf
-ExecStart=/usr/bin/invoker --type=qtcomponents-qt5 /usr/bin/asteroid-alarmpresenter
+ExecStart=asteroid-alarmpresenter
 ExecStop=
