@@ -44,7 +44,9 @@ Application {
         id: alarmHandler
         onError: console.log("asteroid-alarmpresenter: error in AlarmHandler: " + message);
         onActiveDialogsChanged: {
-            if (activeDialogs.length > 0 && (activeDialogs[0].type === Alarm.Clock || activeDialogs[0].type === Alarm.Countdown)) {
+            if (activeDialogs.length > 0 && (activeDialogs[0].type === Alarm.Calendar
+                    || activeDialogs[0].type === Alarm.Clock
+                    || activeDialogs[0].type === Alarm.Countdown)) {
                 alarmDialog = activeDialogs[0]
                 dialogOnScreen = true
             }
@@ -63,13 +65,26 @@ Application {
 
     Label {
         id: alarmTimeField
-        font.pixelSize: Dims.l(15)
-        anchors.centerIn: parent
-        anchors.verticalCenterOffset: Dims.h(13)
+        height: Dims.h(44)
+        width: Dims.l(62)
+        anchors {
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+        }
+        renderType: Text.NativeRendering
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+        wrapMode: Text.WordWrap
+        lineHeight: Dims.l(0.2)
         text: {
             if(alarmDialog == undefined || alarmDialog == null)
                 return ""
+            else if (alarmDialog.type === Alarm.Calendar) {
+                font.pixelSize = Dims.l(8)
+                return alarmDialog.title
+            }
             else {
+                font.pixelSize = Dims.l(15)
                 if(use12H.value) {
                     var amPm = "AM";
                     if(alarm.hour >= 12)
