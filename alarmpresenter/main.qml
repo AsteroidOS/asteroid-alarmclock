@@ -79,7 +79,7 @@ Application {
         text: {
             if(alarmDialog == undefined || alarmDialog == null)
                 return ""
-            else if (alarmDialog.type === Alarm.Calendar) {
+            else if (alarmDialog.type === Alarm.Calendar || alarmDialog.type === Alarm.Countdown) {
                 font.pixelSize = Dims.l(8)
                 return alarmDialog.title
             }
