@@ -77,8 +77,9 @@ Application {
         wrapMode: Text.WordWrap
         lineHeight: Dims.l(0.2)
         text: {
-            if(alarmDialog == undefined || alarmDialog == null)
+            if (alarmDialog == undefined || alarmDialog == null) {
                 return ""
+            }
             else if (alarmDialog.type === Alarm.Calendar || alarmDialog.type === Alarm.Countdown) {
                 font.pixelSize = Dims.l(8)
                 return alarmDialog.title
@@ -124,18 +125,24 @@ Application {
 
     IconButton {
         id: alarmSnooze
-        iconName: "ios-sleep-circle-outline"
+        iconName: visible && alarmDialog.type === Alarm.Countdown ? "ios-refresh-circle-outline" : "ios-sleep-circle-outline"
         anchors {
             right: parent.right
             verticalCenter: parent.verticalCenter
             rightMargin: Dims.iconButtonMargin
         }
-        visible: (alarmDialog !== undefined && alarmDialog !== null) && (alarmDialog.type !== Alarm.Countdown)
+        visible: alarmDialog !== undefined && alarmDialog !== null
         onClicked: {
             feedback.stop()
-            if(alarmDialog !== undefined && alarmDialog !== null)
-                alarmDialog.snooze()
-            alarmTimeField.text = ""
+            if(alarmDialog !== undefined && alarmDialog !== null) {
+                if (alarmDialog.type === Alarm.Countdown) {
+                    alarmDialog.enabled = true
+                    alarmDialog.save()
+                } else {
+                    alarmDialog.snooze()
+                    alarmTimeField.text = ""
+                }
+            }
             alarmHandler.dialogOnScreen = false
             window.close()
         }
