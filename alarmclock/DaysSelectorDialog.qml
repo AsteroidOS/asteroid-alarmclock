@@ -89,6 +89,7 @@ Item {
 
             alarm.title = "";
             alarm.daysOfWeek = daysString;
+            alarm.maximalTimeoutSnoozeCount = 2; //autosnooze twice, cancel after third ring
             alarm.enabled = true;
 
             alarm.save()

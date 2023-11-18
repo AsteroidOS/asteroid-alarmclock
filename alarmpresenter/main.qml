@@ -169,7 +169,7 @@ Application {
         onTriggered: {
             feedback.stop()
             if(alarmDialog !== undefined && alarmDialog !== null)
-                alarmDialog.snooze()
+                alarmDialog.close()
             alarmTimeField.text = ""
             alarmHandler.dialogOnScreen = false
             window.close()
