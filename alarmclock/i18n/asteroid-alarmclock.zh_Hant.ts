@@ -21,7 +21,7 @@
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation>每日</translation>
+        <translation>每天</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
