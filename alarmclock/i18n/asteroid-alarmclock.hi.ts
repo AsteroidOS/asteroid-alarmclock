@@ -16,17 +16,17 @@
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation>सप्ताहांत</translation>
+        <translation>सप्ताहांत/छुट्टी का दिन</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation>हर दिन</translation>
+        <translation>हर दिन / प्रतिदिन</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation>नया अलार्म</translation>
+        <translation>नया अलार्म जोड़ें</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
