@@ -6,27 +6,27 @@
     <message id="id-once">
         <location filename="../AlarmListItem.qml" line="41"/>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>ی کرت</translation>
     </message>
     <message id="id-weekdays">
         <location filename="../AlarmListItem.qml" line="43"/>
         <source>Weekdays</source>
-        <translation type="unfinished"></translation>
+        <translation>رۊزا هفته</translation>
     </message>
     <message id="id-weekends">
         <location filename="../AlarmListItem.qml" line="45"/>
         <source>Weekends</source>
-        <translation type="unfinished"></translation>
+        <translation>دیندا هفته یل</translation>
     </message>
     <message id="id-every-day">
         <location filename="../AlarmListItem.qml" line="47"/>
         <source>Every day</source>
-        <translation type="unfinished"></translation>
+        <translation>هر رۊز</translation>
     </message>
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>ٱووردن هوشدار</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
