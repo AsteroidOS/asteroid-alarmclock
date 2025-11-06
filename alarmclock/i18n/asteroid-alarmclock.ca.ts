@@ -26,7 +26,7 @@
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation>Afegir una alarma</translation>
+        <translation>Afegeix una alarma</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
