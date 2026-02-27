@@ -26,7 +26,7 @@
     <message id="id-add-alarm">
         <location filename="../AlarmListItem.qml" line="187"/>
         <source>Add an alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>Apondre una alarma</translation>
     </message>
     <message id="id-repetition">
         <location filename="../DaysSelectorDialog.qml" line="36"/>
@@ -41,7 +41,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-alarmclock.desktop.h" line="6"/>
         <source>Alarm Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alarma</translation>
     </message>
 </context>
 </TS>
