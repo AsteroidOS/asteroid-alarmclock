@@ -2,7 +2,7 @@ add_library(asteroid-alarmclock main.cpp resources.qrc)
 set_target_properties(asteroid-alarmclock PROPERTIES PREFIX "")
 
 target_link_libraries(asteroid-alarmclock PUBLIC
-	AsteroidApp)
+	Asteroid::AsteroidApp)
 
 install(TARGETS asteroid-alarmclock
 	DESTINATION ${CMAKE_INSTALL_LIBDIR})

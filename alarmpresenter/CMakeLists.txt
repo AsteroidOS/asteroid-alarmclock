@@ -2,7 +2,7 @@ add_library(asteroid-alarmpresenter main.cpp resources.qrc)
 set_target_properties(asteroid-alarmpresenter PROPERTIES PREFIX "")
 
 target_link_libraries(asteroid-alarmpresenter PRIVATE
-	AsteroidApp
+	Asteroid::AsteroidApp
 	Mapplauncherd_qt5::Mapplauncherd_qt5)
 
 install(TARGETS asteroid-alarmpresenter
