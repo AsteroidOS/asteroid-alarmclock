@@ -16,13 +16,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.9
-import Nemo.Alarms 1.0
-import Nemo.DBus 2.0
-import Nemo.Configuration 1.0
-import Nemo.Ngf 1.0
-import org.asteroid.controls 1.0
-import QtMultimedia 5.4
+import QtQuick
+import Nemo.Alarms
+import Nemo.DBus
+import Nemo.Configuration
+import Nemo.Ngf
+import org.asteroid.controls
+import QtMultimedia
 
 Application {
     id: app
