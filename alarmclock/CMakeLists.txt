@@ -4,7 +4,7 @@ set_target_properties(asteroid-alarmclock PROPERTIES PREFIX "")
 target_link_libraries(
 	asteroid-alarmclock
 	PUBLIC
-		Asteroid::AsteroidApp
+		Asteroid::AsteroidApp6
 )
 
 install(

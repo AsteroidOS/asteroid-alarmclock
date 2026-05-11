@@ -4,8 +4,8 @@ set_target_properties(asteroid-alarmpresenter PROPERTIES PREFIX "")
 target_link_libraries(
 	asteroid-alarmpresenter
 	PRIVATE
-		Asteroid::AsteroidApp
-		Mapplauncherd_qt5::Mapplauncherd_qt5
+		Asteroid::AsteroidApp6
+		Mapplauncherd_qt6::Mapplauncherd_qt6
 )
 
 install(

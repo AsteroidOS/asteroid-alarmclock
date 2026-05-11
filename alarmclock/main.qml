@@ -17,10 +17,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQml 2.2
-import QtQuick 2.8
-import Nemo.Alarms 1.0
-import org.asteroid.controls 1.0
+import QtQml
+import QtQuick
+import Nemo.Alarms
+import org.asteroid.controls
 
 Application {
     id: app
