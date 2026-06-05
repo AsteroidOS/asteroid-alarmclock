@@ -1,5 +1,13 @@
-add_library(asteroid-alarmclock main.cpp resources.qrc)
+add_library(asteroid-alarmclock main.cpp)
 set_target_properties(asteroid-alarmclock PROPERTIES PREFIX "")
+
+asteroid_app_qml_module(asteroid-alarmclock
+	main.qml
+	DayButton.qml
+	TimePickerDialog.qml
+	DaysSelectorDialog.qml
+	AlarmListItem.qml
+)
 
 target_link_libraries(
 	asteroid-alarmclock

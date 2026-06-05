@@ -1,5 +1,9 @@
-add_library(asteroid-alarmpresenter main.cpp resources.qrc)
+add_library(asteroid-alarmpresenter main.cpp)
 set_target_properties(asteroid-alarmpresenter PROPERTIES PREFIX "")
+
+asteroid_app_qml_module(asteroid-alarmpresenter
+	main.qml
+)
 
 target_link_libraries(
 	asteroid-alarmpresenter
