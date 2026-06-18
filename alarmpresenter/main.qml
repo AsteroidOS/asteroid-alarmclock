@@ -87,7 +87,7 @@ Application {
             else {
                 if(use12H.value) {
                     var amPm = "AM";
-                    if(alarm.hour >= 12)
+                    if(alarmDialog.hour >= 12)
                         amPm = "PM";
                     return twoDigits(alarmDialog.hour%12) + ":" + twoDigits(alarmDialog.minute) + amPm
                 } else
