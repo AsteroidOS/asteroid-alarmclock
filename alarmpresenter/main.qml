@@ -195,9 +195,10 @@ Application {
         }
     }
 
-    Audio {
+    MediaPlayer {
         id: notificationSound
         source: "file:///usr/share/sounds/notification.wav"
+        audioOutput: AudioOutput { }
     }
 
     Component.onCompleted: {
