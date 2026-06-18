@@ -25,7 +25,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QScopedPointer<QGuiApplication> app(MDeclarativeCache::qApplication(argc, argv));
 
     QScopedPointer<QQuickView> view(MDeclarativeCache::qQuickView());
-    view->setSource(QUrl("qrc:/main.qml"));
+    view->setSource(QUrl("qrc:/Alarmpresenter/main.qml"));
     view->setTitle("Alarm Presenter");
     view->resize(app->primaryScreen()->size());
     view->show();
