@@ -76,16 +76,15 @@ Application {
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.WordWrap
         lineHeight: Dims.l(0.2)
+        font.pixelSize: (alarmDialog && (alarmDialog.type === Alarm.Calendar || alarmDialog.type === Alarm.Countdown)) ? Dims.l(8) : Dims.l(15)
         text: {
             if (alarmDialog == undefined || alarmDialog == null) {
                 return ""
             }
             else if (alarmDialog.type === Alarm.Calendar || alarmDialog.type === Alarm.Countdown) {
-                font.pixelSize = Dims.l(8)
                 return alarmDialog.title
             }
             else {
-                font.pixelSize = Dims.l(15)
                 if(use12H.value) {
                     var amPm = "AM";
                     if(alarm.hour >= 12)
