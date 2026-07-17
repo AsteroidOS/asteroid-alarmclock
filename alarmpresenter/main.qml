@@ -22,7 +22,6 @@ import Nemo.DBus
 import Nemo.Configuration
 import Nemo.Ngf
 import org.asteroid.controls
-import QtMultimedia
 
 Application {
     id: app
@@ -194,10 +193,9 @@ Application {
         }
     }
 
-    MediaPlayer {
+    NonGraphicalFeedback {
         id: notificationSound
-        source: "file:///usr/share/sounds/notification.wav"
-        audioOutput: AudioOutput { }
+        event: "notification"
     }
 
     Component.onCompleted: {
