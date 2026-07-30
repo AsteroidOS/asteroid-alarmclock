@@ -24,7 +24,6 @@ find_package(Mapplauncherd_qt6 REQUIRED)
 
 ecm_find_qmlmodule(Nemo.Configuration 1.0)
 ecm_find_qmlmodule(Nemo.Alarms 1.0)
-ecm_find_qmlmodule(Nemo.Time 1.0)
 ecm_find_qmlmodule(Nemo.Ngf 1.0)
 
 add_subdirectory(alarmclock)
