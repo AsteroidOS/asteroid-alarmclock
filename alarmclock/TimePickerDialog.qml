@@ -18,7 +18,6 @@
  */
 
 import QtQuick
-import Nemo.Time
 import Nemo.Configuration
 import org.asteroid.controls
 import org.asteroid.utils
